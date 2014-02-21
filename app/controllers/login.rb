@@ -35,7 +35,7 @@ post '/updatePass' do
     user_obj = User.where('username = ?',user_name).first
     if !user_obj.nil?
       #FIXME: this will need to rely on dustins encrypt changes
-      user_obj.update_attributes(password: User.encrypt(new_pass))
+      user_obj.update_attributes(password: new_pass)
       redirect to('/profile')
     end
   end

@@ -81,6 +81,13 @@ Card.create(deck_id: 3, question: "President who Resigned", answer: "Richard Nix
 Card.create(deck_id: 3, question: "President who was never elected as Pres or VP", answer: "Gerald Ford" )
 Card.create(deck_id: 3, question: "President Elected to two terms not in a row", answer: "Grover Clevland" )
 
+Deck.create(name: "Test")
+
+Card.create(deck_id: 3, question: "First President", answer: "George Washington" )
+Card.create(deck_id: 3, question: "Civil War President", answer: "Abraham Lincoln" )
+Card.create(deck_id: 3, question: "First President to Die in Office", answer: "William Henry Harrison" )
+
+
 User.create(username: "Walrus", password: "1234")
 User.create(username: "Person1", password: "aabbcc")
 User.create(username: "Person2", password: "qwerty")
