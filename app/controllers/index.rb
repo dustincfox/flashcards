@@ -21,3 +21,36 @@ post '/cool_url' do
   @post = params
   erb :post_cool_url
 end
+
+
+
+post '/login' do
+
+end
+
+
+post '/logout' do
+
+end
+
+
+get '/round/question' do
+
+end
+
+get '/round/question/answer' do
+
+end
+
+get '/round/question/prompt' do
+
+end
+
+get '/round/complete' do
+
+end
+
+get '/round/new' do
+
+end
+
