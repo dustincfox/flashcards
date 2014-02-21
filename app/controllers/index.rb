@@ -27,8 +27,9 @@ end
 #   @answer = @current_card.answer
 # end
 
-get '/round/next' do
+get '/round/next/?' do
   # erb session[:cards]
+  redirect to("/round/complete/") if session[:cards].empty?
   @shuffled_cards = session[:cards].shuffle
   @card = Card.find(@shuffled_cards.pop.to_i)
   session[:cards] = @shuffled_cards
