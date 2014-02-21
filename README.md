@@ -3,7 +3,7 @@ flashcards
 
 Web flashcards group project, V1
 
-Git Workflow:
+## Git Workflow:
 
 You've just been added as a collaborator.
 
@@ -19,14 +19,19 @@ When you are ready to merge with master:
 3. git merge yourbranch master
 4. Make a pull request
 
-Associations Work:
 
-card belongs_to deck
-deck has_many cards
-round belongs_to deck # this will be true only as long as there aren't multiple decks per round
-deck has_many rounds
-round belongs_to user
-user has_many rounds
-user has_many decks :through rounds
-card has_many rounds :through deck
+
+## Associations Work:
+
+* card belongs_to deck
+* deck has_many cards
+* round belongs_to deck # this will be true only as long as there aren't multiple decks per round
+* deck has_many rounds
+* round belongs_to user
+* user has_many rounds
+* user has_many decks :through rounds
+
+* _unsure_:: card has_many rounds :through deck
+
+
 A has_many :through association is often used to set up a many-to-many connection with another model. This association indicates that the declaring model can be matched with zero or more instances of another model by proceeding through a third model. For example, consider a medical practice where patients make appointments to see physicians. The relevant association declarations could look like this:
