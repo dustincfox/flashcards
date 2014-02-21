@@ -1,0 +1,7 @@
+
+<h2>Question: <%= @current_card.question %>?</h2>
+<form action="/round/<%= @current_card.id %>/outcome" method="post" id="question-form">
+  <input type="text" name="answer" id="answer"/>
+  <input type="submit" id="submit"/>
+</form>
+

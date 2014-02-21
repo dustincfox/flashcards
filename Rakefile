@@ -86,6 +86,12 @@ namespace :generate do
 end
 
 namespace :db do
+
+  desc "reset the fucking database"
+  task :reset do
+    puts "resetting the fucking db"
+    exec("bundle exec rake db:drop && bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rake db:seed")
+  end
   desc "Create the database at #{DB_NAME}"
   task :create do
     puts "Creating database #{DB_NAME} if it doesn't exist..."
