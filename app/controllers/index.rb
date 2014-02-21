@@ -3,6 +3,7 @@ get '/' do
   erb :index
 end
 
+<<<<<<< HEAD
 
 post '/login' do
 
@@ -18,6 +19,10 @@ get '/round/new/?' do
   # session.clear
   @decks = Deck.all
   erb :new_round
+=======
+get '/round/question' do
+
+>>>>>>> 2b4bc4093085f22a1f17996644ad04c2a5c55552
 end
 
 post '/round/create' do
