@@ -7,7 +7,7 @@ get '/login' do
 end
 
 post '/login' do
-  if User.authenticate(params[:username],params[:password])
+  if User.new.authenticate(params[:username],params[:password])
     session[:username] = params[:username]
     redirect to('/profile')
   else
