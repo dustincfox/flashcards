@@ -53,6 +53,29 @@ Card.create(deck_id: 2, question: "Nebraska", answer: "Lincoln" )
 Card.create(deck_id: 2, question: "South Dakota", answer: "Pierre" )
 Card.create(deck_id: 2, question: "North Dakota", answer: "Bismarck" )
 Card.create(deck_id: 2, question: "Minnesota", answer: "St. Paul" )
+Card.create(deck_id: 2, question: "Vermont", answer: "Montpelier" )
+Card.create(deck_id: 2, question: "New Hampshire", answer: "Concord" )
+Card.create(deck_id: 2, question: "Connecticut", answer: "Hartford" )
+Card.create(deck_id: 2, question: "Virginia", answer: "Richmond" )
+Card.create(deck_id: 2, question: "Kentucky", answer: "Frankfurt" )
+Card.create(deck_id: 2, question: "Tennessee", answer: "Nashville" )
+Card.create(deck_id: 2, question: "Arkansas", answer: "Little Rock" )
+Card.create(deck_id: 2, question: "Alaska", answer: "Juneau" )
+Card.create(deck_id: 2, question: "Hawaii", answer: "Honolulu" )
+Card.create(deck_id: 2, question: "Maryland", answer: "Annapolis" )
+Card.create(deck_id: 2, question: "Deleware", answer: "Dover" )
+Card.create(deck_id: 2, question: "Oklahoma ", answer: "Oklahoma City" )
+Card.create(deck_id: 2, question: "Pennsylvania", answer: "Harrisburg" )
+Card.create(deck_id: 2, question: "Arizona", answer: "Phoenix" )
+Card.create(deck_id: 2, question: "Massachusetts", answer: "Boston" )
+Card.create(deck_id: 2, question: "Iowa", answer: "Des Moines" )
+
+
+
+
+
+
+
 
 require 'faker'
 
