@@ -1,0 +1,5 @@
+<h3> Decks </h3>
+
+<% Deck.all.map(&:name).each do |name| %>
+  <p><%= name %></p>
+<% end %>

@@ -27,6 +27,10 @@ get '/profile' do
   erb :profile
 end
 
+get '/decks' do
+  erb :decks
+end
+
 post '/updatePass' do
   user_name= params[:uname]
   new_pass = params[:newPass]
