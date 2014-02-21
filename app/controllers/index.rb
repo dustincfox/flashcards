@@ -15,16 +15,21 @@ end
 
 
 get '/round/new/?' do
+  # session.clear
   @decks = Deck.all
   erb :new_round
 end
 
 post '/round/create' do
+
+  # erb params.inspect
   @deck = Deck.find(params[:deck_id].to_i)
   @deck_id = @deck.id
   Round.create(deck_id: @deck_id, user_id: 1) #session[:user_id])
   session[:cards] = @deck.cards
-  redirect to("/round/#{session[:cards].shuffle.pop.id}")
+  redirect to("/round/next")
+ # erb "deck: #{session[:cards].map {|n| n.id}} \n card pulled: #{@card.id} "
+  #redirect to("/round/#{session[:cards].shuffle.pop.id}")
 end
 
 # get '/round/:card_id/?' do
@@ -34,6 +39,9 @@ end
 # end
 
 get '/round/next' do
+  @shuffled_cards = session[:cards].shuffle
+  @card = @shuffled_cards.pop
+  session[:cards] = @shuffled_cards
   redirect to("/round/#{session[:cards].shuffle.pop.id}")
 end
 
@@ -49,6 +57,7 @@ post '/round/:card_id/outcome' do
   @outcome = "Nice job Walrus" if @answer == @guess
   erb :result
 end
+
 
 get '/round/complete/?' do
 
