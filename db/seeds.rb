@@ -83,9 +83,9 @@ Card.create(deck_id: 3, question: "President Elected to two terms not in a row",
 
 Deck.create(name: "Test")
 
-Card.create(deck_id: 3, question: "First President", answer: "George Washington" )
-Card.create(deck_id: 3, question: "Civil War President", answer: "Abraham Lincoln" )
-Card.create(deck_id: 3, question: "First President to Die in Office", answer: "William Henry Harrison" )
+Card.create(deck_id: 4, question: "one", answer: "one")
+Card.create(deck_id: 4, question: "two", answer: "two" )
+Card.create(deck_id: 4, question: "three", answer: "three" )
 
 
 User.create(username: "Walrus", password: "1234")
