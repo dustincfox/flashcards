@@ -54,8 +54,15 @@ Card.create(deck_id: 2, question: "South Dakota", answer: "Pierre" )
 Card.create(deck_id: 2, question: "North Dakota", answer: "Bismarck" )
 Card.create(deck_id: 2, question: "Minnesota", answer: "St. Paul" )
 
-require 'faker'
+require 'digest/md5'
+#dont use faker here because of the
+#encryption we can't tell what it will be if its random
+User.create(username: "Person0", password: Digest::MD5.hexdigest("1234"))
+User.create(username: "Person1", password: Digest::MD5.hexdigest("aabbcc"))
+User.create(username: "Person2", password: Digest::MD5.hexdigest("qwerty"))
+User.create(username: "Person3", password: Digest::MD5.hexdigest("tthhcc"))
+User.create(username: "Person4", password: Digest::MD5.hexdigest("wiperblade"))
+User.create(username: "Person5", password: Digest::MD5.hexdigest("football"))
+User.create(username: "Person6", password: Digest::MD5.hexdigest("twilight"))
 
-100.times do 
-	User.create(user_name: Faker::Name.name, password: "a")
-end
+

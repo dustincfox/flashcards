@@ -5,6 +5,6 @@ class CreateCards < ActiveRecord::Migration
       t.string :question
       t.string :answer
     end
-    add_index :cards, :deck_id, :question, :answer
+    #add_index :cards, :deck_id, :question, :answer
   end
 end
