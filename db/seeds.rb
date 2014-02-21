@@ -95,6 +95,6 @@ Card.create(deck_id: 3, question: "President Elected to two terms not in a row",
 
 require 'faker'
 
-100.times do 
+100.times do
 	User.create(user_name: Faker::Name.name, password: "a")
 end
