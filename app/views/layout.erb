@@ -20,10 +20,12 @@
   <title>Dusty and Friends' Fun Cards</title>
 </head>
 <body>
+  <header class="header">
+    <div class="site-header">
+      <h1><a href="/">Dusty <i>and</i> Friends' Fun Cards</a></h1>
+    </div><!--.site-header-->
+  </header>
   <div class="wrapper">
-    <header class="site-header">
-      <h1><a href="/">Dusty and Friends' Fun Cards</a></h1>
-    </header>
     <nav role="primary">
       <ul class="global nav">
         <li><a href="#">Decks</a></li>
@@ -33,6 +35,9 @@
     </nav>
     <div class="content" role="main">
       <%= yield %>
+    </div>
+    <footer class="footer">
+      <p class="authors">Dustin, Cristin, Thomas, and Eric. Dev Bootcamp 2014.</p>
     </div>
   </div><!--.wrapper-->
 </body>
