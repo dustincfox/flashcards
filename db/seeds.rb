@@ -81,9 +81,10 @@ Card.create(deck_id: 3, question: "President who Resigned", answer: "Richard Nix
 Card.create(deck_id: 3, question: "President who was never elected as Pres or VP", answer: "Gerald Ford" )
 Card.create(deck_id: 3, question: "President Elected to two terms not in a row", answer: "Grover Clevland" )
 
-User.create(username: "walrus", password: "a");
-
-10.times do
-	User.create(username: Faker::Name.name, password: User.encrypt)
-end
-
+User.create(username: "Walrus", password: "1234")
+User.create(username: "Person1", password: "aabbcc")
+User.create(username: "Person2", password: "qwerty")
+User.create(username: "Person3", password: "tthhcc")
+User.create(username: "Person4", password: "wiperblade")
+User.create(username: "Person5", password: "football")
+User.create(username: "Person6", password: "twilight")
