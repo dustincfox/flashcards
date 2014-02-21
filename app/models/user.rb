@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   #this is going to be our method for defining
   #how "strong" the encryption algorithm is
+  
+  
   def self.encrypt(pword = "")
     Digest::SHA256.hexdigest(Digest::MD5.hexdigest(pword)).slice(20..-20)
   end
