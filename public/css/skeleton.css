@@ -7,27 +7,36 @@ p, span, div, li, a, blockquote, i, b, em, strong, td, th, dt, dd {font-size:1em
 
 
 /* RESPONSIVE LAYOUT */
-html > *, nav, .site-header, .content, .footer {display:block;width:95%; margin:0 2.5%; color:#efefef;}
-
+.content, .footer {display:block;width:95%; margin:0 2.5%; }
+html > *, nav, .site-header, .content, .footer {color:#efefef;}
 /* LAYOUT & BROAD STYLES */
 html {background:#2b2b2b; color:#2b2b2b;}
-header {display:block; width:auto; margin:0; padding:0; background:#efefef;}
+header {display:block; width:auto; margin:0; padding:0; background:#efefef; }
 
 nav li {display:inline-block;}
 
 /* STYLE */
+  .wrapper {
+-webkit-box-shadow: 0px -2px 1px 0px rgba(0, 0, 0, 0.25), 0px -1px 0px 0px rgba(255,255,255, 1);
+-moz-box-shadow:    0px -2px 1px 0px rgba(0, 0, 0, 0.25), 0px -1px 0px 0px rgba(255,255,255, 1);
+box-shadow:         0px -2px 1px 0px rgba(0, 0, 0, 0.25), 0px -1px 0px 0px rgba(255,255,255, 1);
+}
   .wrapper .nav,
   .wrapper .footer,
   .wrapper .content {padding:0.5em;}
+  .wrapper .nav {padding-top:2em;}
+  .wrapper .content {padding-top:2em;}
 
-  .site-header {display:inline-block; text-align:left;}
+  .site-header {display:inline-block; text-align:center; margin:0; padding:0;}
     .site-header h1 {font-size:2em; line-height:1.2em;}
     .site-header i {text-transform:lowercase; font-family:georgia,"times new roman",times,serif; font-size:0.75em;font-weight:normal; font-style:italic; letter-spacing:0;}
     .site-header a {display:inline-block; font-family:"trebuchet ms", georgia,"times new roman",times,serif; text-decoration:none; color:#db7623; font-weight:bold; text-shadow:0px -1px #eee, -1px 2px 5px #333; letter-spacing:2px;}
 
 ul, li {list-style:none; margin:0; padding:0;}
 
-.card {padding:1em;}
+.card {padding:1em;
+
+}
 
 header,
 footer {display:block;}
