@@ -5,4 +5,16 @@ Web flashcards group project, V1
 
 Git Workflow:
 
-1.
+You've just been added as a collaborator.
+
+1. Clone the repo.
+2. Checkout your own branch, named after the feature (git checkout -b feature-name)
+3. Git add changes, git commit changes
+4. Push your branch to the remote: git push -u origin your-branch-name (this is where your changes are tracked. They are NOT tracked on master)
+
+When you are ready to merge with master:
+1. git checkout master
+2. git pull (this will pull the MOST up-to-date version of the repo, so you aren't merging with an out of date copy)
+3. git merge yourbranch master
+4. Make a pull request
+
