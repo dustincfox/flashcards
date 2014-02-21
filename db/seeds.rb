@@ -57,12 +57,12 @@ Card.create(deck_id: 2, question: "Minnesota", answer: "St. Paul" )
 require 'digest/md5'
 #dont use faker here because of the
 #encryption we can't tell what it will be if its random
-User.create(username: "Person0", password: Digest::MD5.hexdigest("1234"))
-User.create(username: "Person1", password: Digest::MD5.hexdigest("aabbcc"))
-User.create(username: "Person2", password: Digest::MD5.hexdigest("qwerty"))
-User.create(username: "Person3", password: Digest::MD5.hexdigest("tthhcc"))
-User.create(username: "Person4", password: Digest::MD5.hexdigest("wiperblade"))
-User.create(username: "Person5", password: Digest::MD5.hexdigest("football"))
-User.create(username: "Person6", password: Digest::MD5.hexdigest("twilight"))
+User.create(username: "Person0", password: User.encrypt("1234"))
+User.create(username: "Person1", password: User.encrypt("aabbcc"))
+User.create(username: "Person2", password: User.encrypt("qwerty"))
+User.create(username: "Person3", password: User.encrypt("tthhcc"))
+User.create(username: "Person4", password: User.encrypt("wiperblade"))
+User.create(username: "Person5", password: User.encrypt("football"))
+User.create(username: "Person6", password: User.encrypt("twilight"))
 
 

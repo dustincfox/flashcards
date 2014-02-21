@@ -1,5 +1,7 @@
 require 'digest/md5'
 
+
+
 get '/login' do
   erb :login_screen
 end
