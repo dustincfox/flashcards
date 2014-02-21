@@ -70,6 +70,22 @@ Card.create(deck_id: 2, question: "Arizona", answer: "Phoenix" )
 Card.create(deck_id: 2, question: "Massachusetts", answer: "Boston" )
 Card.create(deck_id: 2, question: "Iowa", answer: "Des Moines" )
 
+Deck.create(name: "Presidents")
+
+Card.create(deck_id: 3, question: "First President", answer: "George Washington" )
+Card.create(deck_id: 3, question: "Civil War President", answer: "Abraham Lincoln" )
+Card.create(deck_id: 3, question: "First President to Die in Office", answer: "William Henry Harrison" )
+Card.create(deck_id: 3, question: "WWI President", answer: "Woodrow Wilson" )
+Card.create(deck_id: 3, question: "Elected to Four Terms", answer: "Franklin Roosevelt" )
+Card.create(deck_id: 3, question: "President who Resigned", answer: "Richard Nixon" )
+Card.create(deck_id: 3, question: "President who was never elected as Pres or VP", answer: "Gerald Ford" )
+Card.create(deck_id: 3, question: "President Elected to two terms not in a row", answer: "Grover Clevland" )
+
+
+
+
+
+
 
 
 
