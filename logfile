@@ -1,3 +1,6 @@
 LOG:  database system was shut down at 2014-02-20 22:29:48 CST
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+LOG:  database system was shut down at 2014-02-21 14:02:51 CST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started

@@ -2,13 +2,15 @@ class User < ActiveRecord::Base
   has_many :rounds
   has_many :decks, through: :rounds
 
+  before_save :encrypt
+
   #this is going to be our method for defining
   #how "strong" the encryption algorithm is
-  def self.encrypt(pword = "")
-    Digest::SHA256.hexdigest(Digest::MD5.hexdigest(pword)).slice(20..-20)
+  def encrypt(pword = self.password)
+    self.password = Digest::SHA256.hexdigest(Digest::MD5.hexdigest(pword)).slice(20..-20)
   end
   # Remember to create a migration!
-  def self.authenticate(uname = "", pword = "")
+  def authenticate(uname, pword)
     #no free ride, you pay!
     return false if uname == "" || pword == ""
     #now we encrypt it if neither are bland because it
