@@ -54,7 +54,7 @@ Card.create(deck_id: 2, question: "South Dakota", answer: "Pierre" )
 Card.create(deck_id: 2, question: "North Dakota", answer: "Bismarck" )
 Card.create(deck_id: 2, question: "Minnesota", answer: "St. Paul" )
 
-require 'digest/md5'
+require 'digest'
 #dont use faker here because of the
 #encryption we can't tell what it will be if its random
 User.create(username: "Person0", password: User.encrypt("1234"))
