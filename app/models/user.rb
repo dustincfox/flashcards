@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   # Remember to create a migration!
   def authenticate(uname, pword)
     #no free ride, you pay!
-    return false if uname == "" || pword == ""
+    #return false if uname == "" || pword == ""
     #now we encrypt it if neither are bland because it
     #would be a waste of power to do so and have it empty
     pword = encrypt(pword)

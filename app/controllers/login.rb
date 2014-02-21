@@ -7,7 +7,7 @@ get '/login' do
 end
 
 post '/login' do
-  if User.authenticate(params[:username],params[:password])
+  if User.new.authenticate(params[:username],params[:password])
     session[:username] = params[:username]
     redirect to('/profile')
   else
@@ -25,6 +25,10 @@ end
 #gives more freedom for the template designers
 get '/profile' do
   erb :profile
+end
+
+get '/decks' do
+  erb :decks
 end
 
 post '/updatePass' do
