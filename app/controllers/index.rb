@@ -26,7 +26,8 @@ post '/round/create' do
   @deck = Deck.find(params[:deck_id].to_i)
   @deck_id = @deck.id
   Round.create(deck_id: @deck_id, user_id: 1) #session[:user_id])
-  session[:cards] = @deck.cards
+  #erb @deck.cards
+  session[:cards] = @deck.cards.map(&:id)
   redirect to("/round/next")
  # erb "deck: #{session[:cards].map {|n| n.id}} \n card pulled: #{@card.id} "
   #redirect to("/round/#{session[:cards].shuffle.pop.id}")
@@ -39,10 +40,11 @@ end
 # end
 
 get '/round/next' do
+  # erb session[:cards]
   @shuffled_cards = session[:cards].shuffle
-  @card = @shuffled_cards.pop
+  @card = Card.find(@shuffled_cards.pop.to_i)
   session[:cards] = @shuffled_cards
-  redirect to("/round/#{session[:cards].shuffle.pop.id}")
+  redirect to("/round/#{@card.id}")
 end
 
 get '/round/:card_id/?' do
