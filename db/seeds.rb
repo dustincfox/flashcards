@@ -80,3 +80,14 @@ Card.create(deck_id: 3, question: "Elected to Four Terms", answer: "Franklin Roo
 Card.create(deck_id: 3, question: "President who Resigned", answer: "Richard Nixon" )
 Card.create(deck_id: 3, question: "President who was never elected as Pres or VP", answer: "Gerald Ford" )
 Card.create(deck_id: 3, question: "President Elected to two terms not in a row", answer: "Grover Clevland" )
+
+require 'digest'
+#dont use faker here because of the
+#encryption we can't tell what it will be if its random
+User.create(username: "Person0", password: User.encrypt("1234"))
+User.create(username: "Person1", password: User.encrypt("aabbcc"))
+User.create(username: "Person2", password: User.encrypt("qwerty"))
+User.create(username: "Person3", password: User.encrypt("tthhcc"))
+User.create(username: "Person4", password: User.encrypt("wiperblade"))
+User.create(username: "Person5", password: User.encrypt("football"))
+User.create(username: "Person6", password: User.encrypt("twilight"))

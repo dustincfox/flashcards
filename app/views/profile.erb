@@ -1,0 +1,37 @@
+<% uname = session[:username] %>
+<% if !uname.nil? %>
+<h3> Welcome <%= uname%> </h3>
+<a href="/logout">Logout</a>
+<h2>Account Settings</h2>
+<h4>Change Password</h4>
+<form action="/updatePass" method="post">
+<input type="hidden" value="<%= uname%>" name="uname"/>
+<input type="password" placeholder="New Password" name="newPass"/>
+<br />
+<input type="password" placeholder="Confirm New Password" name="newPassConfirm"/>
+<br />
+<input type="submit" value="Update" />
+</form>
+<h4>Change Username</h4>
+<form action="/updateUname" method="post">
+<input type="hidden" value="<%= uname%>" name="oldName"/>
+<input type="text" value="<%= uname%>" name="userName"/>
+<br />
+<input type="submit" value="Update" />
+</form>
+<!--CLEAN DAT SHIT UP-->
+<br /><br />
+<h2>Deck Information</h2>
+<hr />
+<% Deck.all.each do |deck_obj| %>
+  <div class="deckInfo">
+    <h3><%= deck_obj.name%></h3>
+    <% deck_obj.cards.all.each do |card|%>
+      <p>Question: <%= card.question%></p>
+    <% end %>
+  </div>
+<% end %>
+<% else %>
+  <code>401 You are not authorized to view this page</code>
+  <p>Please <a href="/login">Login</a> if you think this is a mistake</p>
+<% end %>

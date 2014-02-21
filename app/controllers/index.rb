@@ -22,18 +22,6 @@ post '/cool_url' do
   erb :post_cool_url
 end
 
-
-
-post '/login' do
-
-end
-
-
-post '/logout' do
-
-end
-
-
 get '/round/question' do
 
 end
