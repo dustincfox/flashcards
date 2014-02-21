@@ -1,27 +1,7 @@
-require 'rubygems'
-require 'sinatra'
-
 get '/' do
-  puts "[LOG] Getting /"
-  puts "[LOG] Params: #{params.inspect}"
-  @block = "#{params}"
+
   erb :index
 end
-
-get '/cool_url' do
-  puts "[LOG] Getting /cool_url"
-  puts "[LOG] Params: #{params.inspect}"
-  @input = params
-  erb :get_cool_url
-end
-
-post '/cool_url' do
-  puts "[LOG] Posting to /cool_url"
-  puts "[LOG] Params: #{params.inspect}"
-  @post = params
-  erb :post_cool_url
-end
-
 
 
 post '/login' do
@@ -33,24 +13,32 @@ post '/logout' do
 
 end
 
+get '/round/new/?' do
+  @decks = Deck.all
+  erb :new_round
+end
 
-get '/round/question' do
+get '/round/:card_id/?' do
+  @current_card = Card.find(params[:card_id].to_i)
+  @prompt = @current_card.question
+  @answer = @current_card.answer
+end
+
+post '/round/new' do
 
 end
 
-get '/round/question/answer' do
+get '/round/question/answer/?' do
 
 end
 
-get '/round/question/prompt' do
+get '/round/question/prompt/?' do
 
 end
 
-get '/round/complete' do
+get '/round/complete/?' do
 
 end
 
-get '/round/new' do
 
-end
 

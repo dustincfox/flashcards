@@ -1,0 +1,6 @@
+<form method="post" action="/round/new" id="new-round">
+  <% @decks.each do |deck| %>
+    <input type="radio" name="decks" value="<%= deck.name %>"/>
+  <% end %>
+  <input type="submit" id="submit"/>
+</form>
