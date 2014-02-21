@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_many :rounds
   has_many :decks, through: :rounds
   validates :username, length: {maximum: 10}, uniqueness: true, presence: true, format: /\A[ 0-9a-z]+\z/i
-  validates :password, length: {maximum: 12}
+  validates :password, length: {maximum: 12}, presence: true
   before_save :encrypt
 
   #this is going to be our method for defining
@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   # Remember to create a migration!
   def authenticate(uname, pword)
     #no free ride, you pay!
-    return false if uname == "" || pword == ""
+    #return false if uname == "" || pword == ""
     #now we encrypt it if neither are bland because it
     #would be a waste of power to do so and have it empty
     pword = encrypt(pword)

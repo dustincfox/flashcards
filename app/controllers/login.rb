@@ -7,7 +7,7 @@ get '/login' do
 end
 
 post '/login' do
-  if User.authenticate(params[:username],params[:password])
+  if User.new.authenticate(params[:username],params[:password])
     session[:username] = params[:username]
     redirect to('/profile')
   else
@@ -27,6 +27,10 @@ get '/profile' do
   erb :profile
 end
 
+get '/decks' do
+  erb :decks
+end
+
 post '/updatePass' do
   user_name= params[:uname]
   new_pass = params[:newPass]
@@ -35,7 +39,7 @@ post '/updatePass' do
     user_obj = User.where('username = ?',user_name).first
     if !user_obj.nil?
       #FIXME: this will need to rely on dustins encrypt changes
-      user_obj.update_attributes(password: User.encrypt(new_pass))
+      user_obj.update_attributes(password: new_pass)
       redirect to('/profile')
     end
   end
