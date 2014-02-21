@@ -2,6 +2,15 @@ get '/' do
   erb :index
 end
 
+get '/decks' do
+  @deck = Deck.all
+  erb :list_cards
+end
+
+get '/about' do
+  erb :credits
+end
+
 get '/round/new/?' do
   # session.clear
   @decks = Deck.all
@@ -41,8 +50,8 @@ get '/round/:card_id/?' do
 end
 
 post '/round/:card_id/outcome' do
-  @guess = params[:answer]
-  @answer = Card.find(params[:card_id].to_i).answer
+  @guess = params[:answer].downcase
+  @answer = Card.find(params[:card_id].to_i).answer.downcase
   @outcome = "Sorry, the correct answer is #{@answer}."
   @outcome = "Nice job Walrus" if @answer == @guess
   erb :result
@@ -52,6 +61,3 @@ end
 get '/round/complete/?' do
 
 end
-
-
-

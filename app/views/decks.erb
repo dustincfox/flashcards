@@ -1,0 +1,10 @@
+<h2>Deck Information</h2>
+<hr />
+<% Deck.all.each do |deck_obj| %>
+  <div class="deckInfo">
+    <h3><%= deck_obj.name%></h3>
+    <% deck_obj.cards.all.each do |card|%>
+      <p>Question: <%= card.question%></p>
+    <% end %>
+  </div>
+<% end %>
