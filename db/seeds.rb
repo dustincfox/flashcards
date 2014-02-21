@@ -80,21 +80,3 @@ Card.create(deck_id: 3, question: "Elected to Four Terms", answer: "Franklin Roo
 Card.create(deck_id: 3, question: "President who Resigned", answer: "Richard Nixon" )
 Card.create(deck_id: 3, question: "President who was never elected as Pres or VP", answer: "Gerald Ford" )
 Card.create(deck_id: 3, question: "President Elected to two terms not in a row", answer: "Grover Clevland" )
-
-
-
-
-
-
-
-
-
-
-
-
-
-require 'faker'
-
-100.times do
-	User.create(user_name: Faker::Name.name, password: "a")
-end
