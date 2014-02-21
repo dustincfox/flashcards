@@ -1,0 +1,60 @@
+<form>
+  <p>This is where you type: <input type="text" name="something"></p>
+
+  <p>Type password here: <input type="password" name="check"></p>
+  <p>
+    Radios are dangerous:
+    <input type="radio" name="radio" value ="yes">
+    Yes
+    <input type="radio" name="radio" value ="no">
+    No
+  </p>
+  <p>Is it good?</p>
+  <select name="is_it_good">
+    <option value="yes">Yes</option>
+    <option value="yes2">Yes</option>
+    <option value="of_course">Of course</option>
+    <option value="ayfkm">Are you fucking kidding me?</option>
+  </select>
+
+  <input type="submit">
+
+</form>
+
+<h3>You submitted:</h3>
+<%= @block %>
+
+<form action ="/cool_url" method="post">
+  <p>Item:</p>
+  <input type="text" name="post[item]">
+  <p>Price:</p>
+  <input type="text" name="post[price]">
+  <p>Description:</p>
+  <textarea name="post[description]"></textarea>
+  <input type="submit">
+</form>
+<h3>Posts:</h3><%= @post %>
+
+<form action ="/cool_url" method="get">
+  <p>Name:</p>
+  <input type="text" name="name">
+  <p>Place:</p>
+  <input type="text" name="place">
+  <p>Life:</p>
+    <p>
+    Radios are dangerous:
+    <input type="radio" name="radio" value ="yes">
+    Yes
+    <input type="radio" name="radio" value ="no">
+    No
+  </p>
+  <p>Is it good?</p>
+  <select name="is_it_good">
+    <option value="yes">Yes</option>
+    <option value="really_yes">Yes</option>
+    <option value="of_course">Of course</option>
+    <option value="ayfkm">Are you fucking kidding me?</option>
+  </select>
+  <textarea name="life"></textarea>
+  <input type="submit">
+</form>
