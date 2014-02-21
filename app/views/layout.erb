@@ -33,6 +33,9 @@
         <li><a href="#">About</a></li>
       </ul>
     </nav>
+    <div>
+        <p>Right: <%= (session[:right_count].to_s)%> Wrong: <%= (session[:wrong_count].to_s) %></p>
+    </div>
     <div class="content" role="main">
       <%= yield %>
     </div>
