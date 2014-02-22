@@ -1,8 +1,8 @@
 I'm changing the title of this file from Web flashcards group project, V1 to:
 
-Web FJFJFJFJFJFJFJFFJFJKSLA;FJKDSL GRO00000000000000UP PROJECT YAY ######fjkafdjskfal;sdj
+RO00000000000000UP PROJECT YAY ######fjkafdjskfal;sdj
 
-## Git Workflow:
+## A CHANGE TO CAUSE MERGE CONFLICTS Git Workflow:
 
 DO THIS REALLY FUCKING OFTEN SO ANY MERGE CONFLICTS ARE SUPER MINOR. LITERALLY, EVERY TIME YOU MAKE 3 LINES OF CODE CHANGES OR SOMETHING LIKE THAT
 
@@ -16,8 +16,10 @@ DO THIS REALLY FUCKING OFTEN SO ANY MERGE CONFLICTS ARE SUPER MINOR. LITERALLY, 
 8. Change to the master branch (git checkout master)
 9. Update the master branch to the latest version in the repo (git pull)
 10. Confirm you are on the master branch (git status)
-11.  From the master branch, merge your local copy of master and your local copy of your branch (git merge master yourbranchname)
+11. From the master branch, merge your local copy of master and your local copy of your branch (git merge master yourbranchname)
 12. 
+
+
 
 
 
