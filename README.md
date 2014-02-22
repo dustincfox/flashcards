@@ -1,49 +1,34 @@
-I'm changing the title of this file from Web flashcards group project, V1 to:
+## GIT WORKFLOW
 
-RO00000000000000UP PROJECT YAY ######fjkafdjskfal;sdj
+DO THIS REALLY FUCKING OFTEN SO ANY MERGE CONFLICTS ARE SUPER MINOR. KEEP BRANCH FEATURES TINY TINY.
+LITERALLY, EVERY TIME YOU MAKE 3 LINES OF CODE CHANGES OR SOMETHING LIKE THAT. 
 
-## A CHANGE TO CAUSE MERGE CONFLICTS Git Workflow:
-
-DO THIS REALLY FUCKING OFTEN SO ANY MERGE CONFLICTS ARE SUPER MINOR. LITERALLY, EVERY TIME YOU MAKE 3 LINES OF CODE CHANGES OR SOMETHING LIKE THAT
-
+### GETTING STARTED (ESTABLISHING A NEW FEATURE BRANCH)
 1. Checkout branch master (git checkout master)
 2. Pull the latest master branch (git pull)
 3. Checkout a new branch named for your feature (git checkout -b branchname)
 4. Add your branch to the remote repository (git push -u origin branchname)
-5. Make your changes in your branch.
-6. Once changes are done, git add and git commit your branch.
-7. Push the latest version of your branch up to it's remote on github (git push -u origin yourbranchname)
-8. Go to our project page on github. Select your branch from the dropdown menu of branches, making sure that your latest push went through from step 7.
+5. Continue working on your branch, git add --all and git commit often.
+6. Move on to [the next steps](#steps-for-merging-your-branch-into-master).
 
+### STEPS FOR MERGING YOUR BRANCH INTO MASTER
+1. git add and git commit your final changes on your branch
+2. Push the latest version of your branch up to its remote on github (git push -u origin yourbranchname)
+3. Go to our project page on github. Select your branch from the dropdown menu of branches, making sure that your latest push went through from step 3.
+4. Click the bright green "Compare and Pull Request" button
+5. In the message box, write what you think should be done with the merge conflicts outlined, if any.
+6. Click "submit pull request"
 
+Mama merge will review the changes and make sure the people who are conflicting with their code are pulled in if necessary.
 
+### ETIQUETTE
 
+* git add --all, git commit -m "x" OFTEN
+* DO NOT INCLUDE MULTIPLE FEATURES IN ONE BRANCH. FOR THE LOVE OF GOD.
 
+<hr>
 
-8. Pull the latest version of the master branch and merge it with your branch (git pull https://github.com/cnocon/flashcards.git yourbranchname)
-9. MAKE A PULL REQUEST: Go to our flashcards project page in github. Navigate to your branch. 
-a. https://help.github.com/articles/using-pull-requests#initiating-the-pull-request
-
-9. If there are merge conflicts, git will tell you; check the messages that the terminal spits out after step eight.
-10. To handle merge conflicts, go back into your text editor with all the open files; the same one you were working in before with our project open. Go through the list of filenames that git says have merge conflicts and resolve them manually; read this blog post: http://githowto.com/resolving_conflicts to understand how to read git's notation...
-11. What is in between the <<<<<<<HEAD and the ====================== is your branch. What is after the equals signs part and until the >>>>>>>>>>>>>>>>>>>>branch_id/commit_id/whatev part is what is in the master. 
-12. **BE FUCKING CAREFUL**. 
-
-You've just been added as a collaborator.
-
-1. Clone the repo.
-2. Checkout your own branch, named after the feature (git checkout -b feature-name)
-3. Git add changes, git commit changes
-4. Push your branch to the remote: git push -u origin your-branch-name (this is where your changes are tracked. They are NOT tracked on master)
-
-When you are ready to merge with master:
-
-1. git checkout master
-2. git pull (this will pull the MOST up-to-date version of the repo, so you aren't merging with an out of date copy)
-3. git merge yourbranch master
-4. Make a pull request
-
-
+# Planning
 
 ## Associations Work:
 
@@ -54,9 +39,6 @@ When you are ready to merge with master:
 * round belongs_to user
 * user has_many rounds
 * user has_many decks :through rounds
-
-* _unsure_:: card has_many rounds :through deck
-
 
 A has_many :through association is often used to set up a many-to-many connection with another model. This association indicates that the declaring model can be matched with zero or more instances of another model by proceeding through a third model. For example, consider a medical practice where patients make appointments to see physicians. The relevant association declarations could look like this:
 
