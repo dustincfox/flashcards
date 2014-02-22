@@ -1,7 +1,8 @@
 flashcards
 ==========
+I'm changing the title of this file from Web flashcards group project, V1 to:
 
-Web flashcards group project, V1
+Web FLASCHARDS GROUP PROJECT YAY
 
 ## Git Workflow:
 
