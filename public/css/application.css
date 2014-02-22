@@ -1,38 +1,37 @@
-/*.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}
+html {background:#8a8a8a url(images/walrus-treatment.png) 0 0 no-repeat; background-size:100%; background-attachment:cover;}
 
-.category {
-  color: lightblue;
-  background: red;
-  font-size: 40px;
-  text-decoration: underline;
-  width: 80%;
-}
+h1, h2, h3, h4, h5, h6 { font-weight:normal;}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight:normal; font-family:inherit; text-decoration:none; }
+ul, li {list-style:none; margin:0; padding:0;}
+a {color:#efefef;}
 
-.post {
-  border: solid black;
-  margin-left: 5%;
-  width: 50%;
-}
+/* RESPONSIVE LAYOUT */
+.content, 
+.footer {display:block;width:95%; margin:0 2.5%; }
+/* LAYOUT & BROAD STYLES */
 
-input {
-  margin: 10px;
-}
+.site-header {text-align:center; border:2px solid pink;
+  display:block; margin:0; padding:0; position:absolute; right:1em; top:1em; width:130px; height:130px; border-radius:50%; overflow:hidden; 
+   /*background:rgba(255,255,255,0.55);*/ background:#fff;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.75), inset 0px 1px 1px rgba(0, 0, 0, 0.75);
+     -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.75), inset 0px 1px 1px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.75), inset 0px 1px 1px rgba(0, 0, 0, 0.75); 
+        } 
+.site-header h1 {font-size:1em; position:relative; left:0; top:1em; font-weight:normal;}
+  .site-header h1 a {text-decoration:none; /*text-shadow:0px -1px #333, -1px 1px 5px #333; */letter-spacing:1px; color:#121212;}
+    .site-header h1 a i,
+    .site-header h1 a b {text-transform:lowercase; font-family:georgia,"times new roman",times,serif; font-size:0.75em;font-weight:normal; font-style:italic; letter-spacing:0;}
 
-p {
-  margin: 10px;
-}
 
-th {
-  text-align: left;
-}
+/* STYLE */
+  .wrapper .footer,
+  .wrapper .content {padding:2em 0 0.5em;}
 
-select {
-  margin:10px;
-  display: block;
-}
-*/
+
+
+.nav {width:90%; height:30px; background:#333; padding:0 5%;}
+.nav li {display:inline-block; margin-right:1em;}
+.nav li a {display:block; line-height:30px; color:#efefef; text-decoration:none; }
+
+.wrong {background:red; color:#fff;}
+ 

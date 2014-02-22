@@ -2,6 +2,7 @@ get '/' do
   erb :index
 end
 
+
 get '/decks' do
   @deck = Deck.all
   erb :list_cards
