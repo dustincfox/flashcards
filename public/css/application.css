@@ -59,3 +59,10 @@ input[type="submit"] {
     0px 0px 0px rgba(255,255,255,0);
 }
 footer {color:#fff;}
+
+/*ERIC ADDED THIS, FEEL FREE TO REARRANGE*/
+
+.indent {
+  text-indent: .5em;
+  font-size: 80%;
+}

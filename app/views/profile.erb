@@ -15,7 +15,8 @@
       <% correct = @user.decks.where(name: "#{deck.name}").first.rounds.map(&:guesses).flatten.map(&:result).count(true) %>
       <% percent = correct * 100 / guesses %>
     <% end %>
-    <p><%= "#{deck.name}: #{times} #{rounds} at #{percent}\% correct" %></p>
+    <p><%= "#{deck.name}: #{times} #{rounds}" %>
+      <span class="indent"><%= "Correct Rate of #{percent}\%" %></span></p>
   <% end %>
 
   <a href="/logout">Logout</a>
