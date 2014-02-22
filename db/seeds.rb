@@ -88,3 +88,71 @@ User.create(username: "Person3", password: "tthhcc")
 User.create(username: "Person4", password: "wiperblade")
 User.create(username: "Person5", password: "football")
 User.create(username: "Person6", password: "twilight")
+
+
+Deck.create(name: "Caliphs")
+
+Card.create(deck_id: 4, question: "The First Caliph (no numeral)", answer: "Abu Bakr" )
+Card.create(deck_id: 4, question: "The Most Rapid Expansion of Islam (no numeral)", answer: "Umar" )
+Card.create(deck_id: 4, question: "Son of Abu Talib (no numeral)", answer: "Ali" )
+Card.create(deck_id: 4, question: "Assassinated in Medina (no numeral)", answer: "Uthman" )
+Card.create(deck_id: 4, question: "The First Umayyad Caliph (no numeral)", answer: "Mu'awiya" )
+Card.create(deck_id: 4, question: "Ascetic Umayyad Caliph (no numeral)", answer: "Yazid" )
+Card.create(deck_id: 4, question: "Drunkard Umayyad Caliph (no numeral)", answer: "al-Walid" )
+Card.create(deck_id: 4, question: "Umayyad Caliph who saw expansion stall (no numeral)", answer: "Hisham" )
+Card.create(deck_id: 4, question: "Caliph who founded Baghdad (no numeral)", answer: "al-Mansur" )
+Card.create(deck_id: 4, question: "Caliph of Arabian Nights (no numeral)", answer: "Harun al-Rashid" )
+Card.create(deck_id: 4, question: "Caliph of the Arabian Nights (no numeral)", answer: "Harun al-Rashid" )
+Card.create(deck_id: 4, question: "Caliph who had the Dome of the Rock built (no numeral)", answer: "Abd al-Malik" )
+
+Deck.create(name: "Countries")
+
+Card.create(deck_id: 5, question: "Home of the autobahn", answer: "Germany" )
+Card.create(deck_id: 5, question: "In it's Fifth Republic", answer: "France" )
+Card.create(deck_id: 5, question: "Unification was completed (mostly) with the defeat of the papal armies", answer: "Italy" )
+Card.create(deck_id: 5, question: "Custodian of the Temple Mount in Jerusalem", answer: "Jordan" )
+Card.create(deck_id: 5, question: "Country with over 30 languages, and thousands of dialects", answer: "India" )
+Card.create(deck_id: 5, question: "Largest Muslim Population", answer: "Indonesia" )
+Card.create(deck_id: 5, question: "Formerly Zaire", answer: "Democratic Republic of the Congo" )
+
+
+Deck.create(name: "Game of Thrones")
+
+Card.create(deck_id: 6, question: "Who dies", answer: "Everyone" )
+
+Deck.create(name: "Are They Awesome?")
+
+Card.create(deck_id: 7, question: "Dustin", answer: "Yes" )
+Card.create(deck_id: 7, question: "Thomas", answer: "Yes" )
+Card.create(deck_id: 7, question: "Cristin", answer: "Yes" )
+Card.create(deck_id: 7, question: "Eric", answer: "No" )
+
+Deck.create(name: "Walrus Trivia")
+
+Card.create(deck_id: 8, question: "Do Walruses Live in Siberia?", answer: "Yes" )
+Card.create(deck_id: 8, question: "Walrus Scientific Name", answer: "Odobenus Rosmarus" )
+Card.create(deck_id: 8, question: "Who Gave Them Their Scientific Name", answer: "Carolus Linnaeus" )
+Card.create(deck_id: 8, question: "Rough Average Adult Weight", answer: "1.5 tons" )
+Card.create(deck_id: 8, question: "Scientific Name For a Group of Walruses", answer: "Herd" )
+Card.create(deck_id: 8, question: "How long is gestation", answer: "16 Months" )
+Card.create(deck_id: 8, question: "Name for a male", answer: "Bull" )
+Card.create(deck_id: 8, question: "Name for a female", answer: "Cow" )
+Card.create(deck_id: 8, question: "What do they use to get out of water", answer: "Tusks" )
+Card.create(deck_id: 8, question: "How long can they live in the wild", answer: "40 Years" )
+Card.create(deck_id: 8, question: "What is cooler than a walrus", answer: "Nothing" )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
