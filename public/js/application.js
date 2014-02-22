@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  $("#login").hide()
+  $('.login-button').on("click", function(e) {
+    e.preventDefault;
+    $("#login").toggle()
+  });
   // This is called after the document has loaded in its entirety
   // This guarantees that any elements we bind to will exist on the page
   // when we try to bind to them
