@@ -7,10 +7,6 @@ get '/decks/?' do
   erb :list_cards
 end
 
-get '/about/?' do
-  erb :credits
-end
-
 get '/round/new/?' do
   @decks = Deck.all
   erb :new_round
