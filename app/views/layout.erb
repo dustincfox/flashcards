@@ -29,19 +29,15 @@
         <li><a href="/decks">Decks</a></li>
         <li><a href="/round/new">Play</a></li>
         <li><a href="/about">About</a></li>
-        <li class="login-out-buttons"><% if session[:username].nil? %><a href="/login" class="login-button">Log In</a><% else %><a href="/logout" class="logout-button">Logout</a><% end %>
+        <li class="login-out-buttons"><% if session[:username].nil? %><a href="/login" class="login">Log In</a><% else %><a href="/logout" class="logout">Logout</a><% end %>
       </ul>
     </nav>
     <div class="content" role="main">
       <%= erb :_stats %>
       <%= erb :_login_form %>
       <%= yield %>
-    <section class="joke">
-    <h2>Random Walrus Joke:</h2>
-      <% jokes = [["How do you tell the difference between a walrus and an orange?","Put your arms around it and squeeze it. If you don't get orange juice, it's a walrus." ], ["What's the difference between a walrus and a banana?","You'd better find out, because if you ever try to peel a walrus." ], ["What's a balanced diet for a walrus?", "seal in each paw!" ], ["What did the walrus say when it was late?", "I would have been here sooner, but my iceberg hit a ship." ], ["What does a Walrus get from sitting on the ice too long?", "Polaroids!"], ["Why do walrus' swim in salt water?","Because pepper water makes them sneeze!"], ["What did the grape say when the walrus stood on it?","Nothing, it just let out a little wine!"], ["Where do walrus' go to see movies?","The dive-in!"]].sample%>
-      <p class="joke question"><%= jokes[0] %></p>
-      <p class="joke answer"><b>Answer:</b> <%= jokes[1] %></p>
-    </section>
+      <%= erb :_jokes %>
+    </div><!--.content-->
     <footer class="footer">
       <p class="authors">Dustin, Cristin, Thomas, and Eric. Dev Bootcamp 2014.</p>
     </div>
