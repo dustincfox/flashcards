@@ -51,7 +51,7 @@ post '/round/:card_id/outcome' do
     session[:right_count] += 1
     @outcome = "Nice job Walrus"
   else
-    Guess.create(deck_id: @card.deck.id, user_id: session[:user_id], result: false)
+    Guess.create(round_id: session[:round_id], user_id: session[:user_id], result: false)
     session[:wrong_count] += 1
     @outcome = "Sorry, the correct answer is #{@answer}."
   end
