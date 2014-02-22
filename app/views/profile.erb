@@ -4,6 +4,15 @@
   <% rounds = "rounds"%>
   <% rounds = "round" if @rounds_played == 1 %>
   <p>You have played <%="#{@rounds_played} #{rounds}"%>.</p>
+
+  <%Deck.all.each do |deck|%>
+    <% rounds = "rounds"%>
+    <% rounds = "round" if @rounds_played == 1 %>
+    <% times = @user.decks.map(&:name).count(deck.name)%>
+    <p><%="#{deck.name}: #{times} #{rounds}"%></p>
+  <% end %>
+
+
   <a href="/logout">Logout</a>
   <h2>Account Settings</h2>
   <h4>Change Password</h4>
