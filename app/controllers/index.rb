@@ -55,7 +55,11 @@ post '/round/:card_id/outcome' do
     session[:wrong_count] += 1
     @outcome = "Sorry, the correct answer is #{@answer}."
   end
-  erb :result
+  if request.xhr?
+    erb :result, layout: false
+  else
+    erb :result
+  end
 end
 
 
