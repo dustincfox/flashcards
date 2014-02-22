@@ -51,6 +51,8 @@ end
 
 
 get '/complete/?' do
+  session[:right_count] = 0
+  session[:wrong_count] = 0  
   erb :victory
 end
 

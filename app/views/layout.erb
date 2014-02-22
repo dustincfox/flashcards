@@ -34,7 +34,9 @@
       </ul>
     </nav>
     <div>
-        <p>Right: <%= (session[:right_count].to_s)%> Wrong: <%= (session[:wrong_count].to_s) %></p>
+        <% unless session[:right_count] == 0 && session[:wrong_count] == 0 %>
+          <p>Right: <%= (session[:right_count].to_s)%> Wrong: <%= (session[:wrong_count].to_s) %></p>
+        <%end%>
     </div>
     <div class="content" role="main">
       <%= yield %>
