@@ -15,40 +15,40 @@ header,
 
 .site-header a {font-size:2em; display:inline-block; text-shadow: 0px 1px 1px rgba(0,0,0,0.4); color: #fff; border: none; padding: 0;}
 
+.walrus {display:block; width:200px; height:auto; border-radius:50%; 
+  box-shadow: 0px 1px 3px rgba(000,000,000,0.5), inset 0px -1px 0px rgba(255,255,255,0.7); border:1px solid #333; }
 
 
 
-
+.site-header h1 {font-size:1em;}
+.walrus {display:block; position:absolute; top:1em; right:1em;}
 .nav li {display:block; float:left; margin-right:1em;}
-
-.nav a,
+.nav li a,
 input[type="submit"] {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff; text-shadow:0px 1px #000;
-  padding: 10px 20px;
+  color: #eee;
+  padding: 10px 14px;
   background: -moz-linear-gradient(
     top,
-    #faebb1 0%,
-    #ffc021 25%,
-    #ffb700);
+    #b000b0 0%,
+    #6e0c6e);
   background: -webkit-gradient(
     linear, left top, left bottom,
-    from(#faebb1),
-    color-stop(0.25, #ffc021),
-    to(#ffb700));
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #b89300;
+    from(#b000b0),
+    to(#6e0c6e));
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   -moz-box-shadow:
-    0px 1px 3px rgba(000,000,000,0.5),
-    inset 0px -1px 0px rgba(255,255,255,0.7);
+    0px 1px 0px rgba(066,066,066,1),
+    inset 0px 1px 0px rgba(103,103,103,1);
   -webkit-box-shadow:
-    0px 1px 3px rgba(000,000,000,0.5),
-    inset 0px -1px 0px rgba(255,255,255,0.7);
+    0px 1px 0px rgba(066,066,066,1),
+    inset 0px 1px 0px rgba(103,103,103,1);
   box-shadow:
-    0px 1px 3px rgba(000,000,000,0.5),
-    inset 0px -1px 0px rgba(255,255,255,0.7);
+    0px 1px 0px rgba(066,066,066,1),
+    inset 0px 1px 0px rgba(103,103,103,1);
   text-shadow:
-    0px 1px 1px rgba(000,000,000,0.7);
+    0px -1px 0px rgba(028,028,028,1),
+    0px 0px 0px rgba(255,255,255,0);
 }
+
