@@ -31,8 +31,9 @@ end
 get '/profile' do
   @user_id = User.where(username: session[:username]).first.id
   session[:user_id] = @user_id
-  @rounds_played = User.find(session[:user_id].to_i).rounds.count
-  @decks = Deck.all.map(&:name)
+  @user = User.find(session[:user_id].to_i)
+  @rounds_played = @user.rounds.count
+  @decks = User.find(1).decks.map(&:name)
   erb :profile
 end
 
