@@ -9,7 +9,9 @@
     <% rounds = "rounds"%>
     <% rounds = "round" if @rounds_played == 1 %>
     <% times = @user.decks.map(&:name).count(deck.name)%>
-    <p><%="#{deck.name}: #{times} #{rounds}"%></p>
+    <% percent = @user %>
+    <p><%="#{deck.name}: #{times} #{rounds} at \% correct" %></p>
+    <p></p>
   <% end %>
 
 
