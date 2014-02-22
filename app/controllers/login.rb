@@ -29,6 +29,9 @@ end
 #we actually handle the session check on the erb so it
 #gives more freedom for the template designers
 get '/profile' do
+  @user_id = User.where(username: session[:username]).first.id
+  session[:user_id] = @user_id
+  @rounds_played = User.find(session[:user_id].to_i).rounds.count
   erb :profile
 end
 

@@ -19,9 +19,7 @@ end
 post '/round/create' do
   @deck = Deck.find(params[:deck_id].to_i)
   @deck_id = @deck.id
-  @user_id = User.where(username: session[:username]).first.id
-  session[:user_id] = @user_id
-  @round = Round.create(deck_id: @deck_id, user_id: @user_id) #session[:user_id])
+  @round = Round.create(deck_id: @deck_id, user_id: session[:user_id]) #session[:user_id])
   session[:round_id] = @round.id
   session[:cards] = @deck.cards.map(&:id)
   session[:right_count] = 0
