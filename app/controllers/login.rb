@@ -21,6 +21,11 @@ get '/logout' do
     redirect to('/')
   end
 end
+
+post '/createAccount' do
+  User.create(username: params[:username],password: params[:password])
+  redirect to('/login')
+end
 #we actually handle the session check on the erb so it
 #gives more freedom for the template designers
 get '/profile' do
@@ -32,7 +37,7 @@ get '/decks' do
 end
 
 post '/updatePass' do
-  user_name= params[:uname]
+  user_name= params[:uName]
   new_pass = params[:newPass]
   confirm  = params[:newPassConfirm]
   if new_pass == confirm
@@ -50,6 +55,7 @@ post '/updateUname' do
   user_name = params[:userName]
 
   user_obj = User.where('username = ?',old_name).first
+  puts "LOG: #{old_name}"
   if !user_obj.nil?
     user_obj.update_attributes(username: user_name)
   end

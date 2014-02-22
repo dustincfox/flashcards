@@ -1,5 +1,9 @@
-<h3> Decks </h3>
-
-<% Deck.all.map(&:name).each do |name| %>
-  <p><%= name %></p>
+<h2>Deck Information</h2>
+<% Deck.all.each do |deck_obj| %>
+  <article class="deck info">
+    <h3><%= deck_obj.name %></h3>
+    <% deck_obj.cards.all.each do |card|%>
+      <p>Question: <%= card.question %></p>
+    <% end %>
+  </article>
 <% end %>
