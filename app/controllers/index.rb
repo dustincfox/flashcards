@@ -28,8 +28,7 @@ post '/round/create' do
 end
 
 get '/round/next/?' do
-  # erb session[:cards]
-  redirect to("/round/complete/") if session[:cards].empty?
+  redirect to("/complete/") if session[:cards].empty?
   @shuffled_cards = session[:cards].shuffle
   @card = Card.find(@shuffled_cards.pop.to_i)
   session[:cards] = @shuffled_cards
