@@ -48,10 +48,17 @@ post '/round/:card_id/outcome' do
   if @answer == @guess
     session[:right_count] += 1
     puts session
-    @outcome = "Nice job Walrus" 
+    @outcome = "Nice job Walrus"
   else
     session[:wrong_count] += 1
     @outcome = "Sorry, the correct answer is #{@answer}."
   end
   erb :result
+end
+
+
+get '/complete/?' do
+  session[:right_count] = 0
+  session[:wrong_count] = 0
+  erb :victory
 end
