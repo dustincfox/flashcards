@@ -1,6 +1,9 @@
 <% uname = session[:username] %>
 <% if !uname.nil? %>
   <h3> Welcome <%= uname%> </h3>
+  <% rounds = "rounds"%>
+  <% rounds = "round" if @rounds_played == 1 %>
+  <p>You have played <%="#{@rounds_played} #{rounds}"%>.</p>
   <a href="/logout">Logout</a>
   <h2>Account Settings</h2>
   <h4>Change Password</h4>
