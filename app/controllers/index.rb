@@ -3,7 +3,7 @@ get '/' do
 end
 
 get '/decks/?' do
-  @deck = Deck.all
+  @decks = Deck.all
   erb :list_cards
 end
 
