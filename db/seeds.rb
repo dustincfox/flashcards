@@ -79,7 +79,7 @@ Card.create(deck_id: 3, question: "WWI President", answer: "Woodrow Wilson" )
 Card.create(deck_id: 3, question: "Elected to Four Terms", answer: "Franklin Roosevelt" )
 Card.create(deck_id: 3, question: "President who Resigned", answer: "Richard Nixon" )
 Card.create(deck_id: 3, question: "President who was never elected as Pres or VP", answer: "Gerald Ford" )
-Card.create(deck_id: 3, question: "President Elected to two terms not in a row", answer: "Grover Clevland" )
+Card.create(deck_id: 3, question: "President Elected to two terms not in a row", answer: "Grover Cleveland" )
 
 User.create(username: "Walrus", password: "1234")
 User.create(username: "Person1", password: "aabbcc")
