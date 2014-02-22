@@ -9,11 +9,14 @@
     <% rounds = "rounds"%>
     <% rounds = "round" if @rounds_played == 1 %>
     <% times = @user.decks.map(&:name).count(deck.name)%>
-    <% percent = @user.rounds.map(&:guesses).flatten.map(&:result).count(true) * 100 / @user.rounds.map(&:guesses).flatten.count %>
-    <p><%="#{deck.name}: #{times} #{rounds} at #{percent}\% correct" %></p>
-    <p></p>
+    <% percent = 0 %>
+    <% unless @user.decks.where(name: "#{deck.name}").first == nil%>
+      <% guesses = @user.decks.where(name: "#{deck.name}").first.rounds.map(&:guesses).flatten.count %>
+      <% correct = @user.decks.where(name: "#{deck.name}").first.rounds.map(&:guesses).flatten.map(&:result).count(true) %>
+      <% percent = correct * 100 / guesses %>
+    <% end %>
+    <p><%= "#{deck.name}: #{times} #{rounds} at #{percent}\% correct" %></p>
   <% end %>
-
 
   <a href="/logout">Logout</a>
   <h2>Account Settings</h2>
