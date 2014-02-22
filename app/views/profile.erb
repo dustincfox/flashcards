@@ -9,8 +9,8 @@
     <% rounds = "rounds"%>
     <% rounds = "round" if @rounds_played == 1 %>
     <% times = @user.decks.map(&:name).count(deck.name)%>
-    <% percent = @user %>
-    <p><%="#{deck.name}: #{times} #{rounds} at \% correct" %></p>
+    <% percent = @user.rounds.map(&:guesses).flatten.map(&:result).count(true) * 100 / @user.rounds.map(&:guesses).flatten.count %>
+    <p><%="#{deck.name}: #{times} #{rounds} at #{percent}\% correct" %></p>
     <p></p>
   <% end %>
 
