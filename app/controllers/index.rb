@@ -19,7 +19,9 @@ end
 post '/round/create' do
   @deck = Deck.find(params[:deck_id].to_i)
   @deck_id = @deck.id
-  Round.create(deck_id: @deck_id, user_id: 1) #session[:user_id])
+  @user_id = User.where(username: session[:username]).first.id
+  session[:user_id] = @user_id
+  Round.create(deck_id: @deck_id, user_id: @user_id) #session[:user_id])
   session[:cards] = @deck.cards.map(&:id)
   session[:right_count] = 0
   session[:wrong_count] = 0
@@ -42,10 +44,11 @@ end
 
 post '/round/:card_id/outcome' do
   @guess = params[:answer]
-  @answer = Card.find(params[:card_id].to_i).answer
+  @card = Card.find(params[:card_id].to_i)
+  @answer = @card.answer
   if @answer == @guess
+    Guess.create(deck_id: @card.deck.id, )
     session[:right_count] += 1
-    puts session
     @outcome = "Nice job Walrus"
   else
     session[:wrong_count] += 1
