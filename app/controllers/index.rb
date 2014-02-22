@@ -21,7 +21,8 @@ post '/round/create' do
   @deck_id = @deck.id
   @user_id = User.where(username: session[:username]).first.id
   session[:user_id] = @user_id
-  Round.create(deck_id: @deck_id, user_id: @user_id) #session[:user_id])
+  @round = Round.create(deck_id: @deck_id, user_id: @user_id) #session[:user_id])
+  session[:round_id] = @round.id
   session[:cards] = @deck.cards.map(&:id)
   session[:right_count] = 0
   session[:wrong_count] = 0
@@ -47,10 +48,14 @@ post '/round/:card_id/outcome' do
   @card = Card.find(params[:card_id].to_i)
   @answer = @card.answer
   if @answer == @guess
-    Guess.create(deck_id: @card.deck.id, )
+    puts "\n\n\n\n\n\n\n\n"
+    puts session[:round_id]
+    puts "\n\n\n\n\n\n\n\n"
+    Guess.create(round_id: session[:round_id], user_id: session[:user_id], result: true)
     session[:right_count] += 1
     @outcome = "Nice job Walrus"
   else
+    Guess.create(deck_id: @card.deck.id, user_id: session[:user_id], result: false)
     session[:wrong_count] += 1
     @outcome = "Sorry, the correct answer is #{@answer}."
   end
