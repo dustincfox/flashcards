@@ -2,13 +2,12 @@ get '/' do
   erb :index
 end
 
-
-get '/decks' do
+get '/decks/?' do
   @deck = Deck.all
   erb :list_cards
 end
 
-get '/about' do
+get '/about/?' do
   erb :credits
 end
 
@@ -18,7 +17,6 @@ get '/round/new/?' do
 end
 
 post '/round/create' do
-  # erb params.inspect
   @deck = Deck.find(params[:deck_id].to_i)
   @deck_id = @deck.id
   Round.create(deck_id: @deck_id, user_id: 1) #session[:user_id])

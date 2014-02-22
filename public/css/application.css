@@ -1,4 +1,4 @@
-html {background:#8a8a8a url(images/walrus-treatment.png) 0 0 no-repeat; background-size:100%; background-attachment:cover;}
+html {background:#8a8a8a url(images/bg.jpg) 0 0 no-repeat; background-size:100%; background-attachment:cover;}
 
 h1, h2, h3, h4, h5, h6 { font-weight:normal;}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight:normal; font-family:inherit; text-decoration:none; }
@@ -10,15 +10,14 @@ a {color:#efefef;}
 .footer {display:block;width:95%; margin:0 2.5%; }
 /* LAYOUT & BROAD STYLES */
 
-.site-header {text-align:center; border:2px solid pink;
-  display:block; margin:0; padding:0; position:absolute; right:1em; top:1em; width:130px; height:130px; border-radius:50%; overflow:hidden; 
+.site-header a {text-align:center; border:2px solid #3582df;
+  display:block; margin:0; padding:0; position:absolute; right:1em; top:0; width:130px; height:130px; border-radius:50%; overflow:hidden; text-decoration:none; /*text-shadow:0px -1px #333, -1px 1px 5px #333; */letter-spacing:1px; color:#121212;
    /*background:rgba(255,255,255,0.55);*/ background:#fff;
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.75), inset 0px 1px 1px rgba(0, 0, 0, 0.75);
      -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.75), inset 0px 1px 1px rgba(0, 0, 0, 0.75);
           box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.75), inset 0px 1px 1px rgba(0, 0, 0, 0.75); 
         } 
 .site-header h1 {font-size:1em; position:relative; left:0; top:1em; font-weight:normal;}
-  .site-header h1 a {text-decoration:none; /*text-shadow:0px -1px #333, -1px 1px 5px #333; */letter-spacing:1px; color:#121212;}
     .site-header h1 a i,
     .site-header h1 a b {text-transform:lowercase; font-family:georgia,"times new roman",times,serif; font-size:0.75em;font-weight:normal; font-style:italic; letter-spacing:0;}
 
@@ -34,4 +33,24 @@ a {color:#efefef;}
 .nav li a {display:block; line-height:30px; color:#efefef; text-decoration:none; }
 
 .wrong {background:red; color:#fff;}
+
+html {}
+
+a,
+input[type="submit"] {display: inline-block;
+text-decoration: none;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+background-color: #3582df;
+background-image: -moz-linear-gradient(#45b3f3 0%, #3582df 100%);
+background-image: -webkit-linear-gradient(#45b3f3 0%, #3582df 100%);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#45b3f3', endColorstr='#3582df')";
+border-radius: 4px;
+box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+margin: 0 0 10px;
+padding: 12px 20px 14px 15px;
+font-size: 17px;
+-webkit-backface-visibility: hidden;
+font-weight: normal;
+color: #fff;
+}
  
