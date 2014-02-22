@@ -1,25 +1,26 @@
-html {background:url(images/bg.jpg) 0 0 no-repeat; background-size:100%; background-attachment:cover;}
-
+html {background:#220f46 url(images/bg.jpg) 0 0 no-repeat; background-size:100%; background-attachment:cover;}
+.joke {display:block;  margin-top:3em; padding:0.5em; background:#220f46;/*background:url(images/bg.jpg) 0 0 no-repeat;*/ background-size:100%; background-attachment:cover; color:#eee; border-radius:3px;}
+.joke .inner {display:block; text-shadow: 0px -1px 0px rgba(028,028,028,1),
+    0px 0px 0px rgba(255,255,255,0);
+  font-size:1.2em; background:rgba(255,255,255, 0.3);  padding:1em; border-radius:3px;}
 h1, h2, h3, h4, h5, h6 { font-weight:normal;}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight:normal; font-family:inherit; text-decoration:none; }
 ul, li {list-style:none; margin:0; padding:0;}
-a {color:#efefef; text-decoration:none;}
-
+a {color:#121212; text-decoration:none;}
+.content a {text-decoration:underline;}
 /* RESPONSIVE LAYOUT */
 nav,
 header,
-.content, 
+.content,
 .footer {display:block;width:90%; margin:0 2.5%; padding:2em 2.5%; }
-/* LAYOUT & BROAD STYLES */
 
-
-
-.walrus {display:block; width:300px; height:300px; background:transparent; overflow:hidden; border-radius:50%; 
+.walrus {display:block; width:300px; height:300px; background:transparent; overflow:hidden; border-radius:50%;
   box-shadow: 0px 1px 3px rgba(000,000,000,0.5), inset 0px -1px 0px rgba(255,255,255,0.7); border:1px solid #333; }
 .walrus img {height:inherit;}
-.content {background:#eee; border-radius:3px; margin-top:1em;
-  -webkit-box-shadow: 0px 1px 0px rgba(066,066,066,1), inset 0px 1px 0px rgba(103,103,103,1);
-          box-shadow: 0px 1px 0px rgba(066,066,066,1), inset 0px 1px 0px rgba(103,103,103,1);}
+
+.content {overflow:hidden; background:#eee; border-radius:3px; margin-top:1em;
+  -webkit-box-shadow:inset 0px 1px 0px rgba(066,066,066,.5), inset 0px 1px 0px rgba(103,103,103,1);
+          box-shadow:inset 0px 1px 0px rgba(066,066,066,.5), inset 0px 1px 0px rgba(103,103,103,1), 0px 1px 2px rgba(066,066,066,1);}
 
 form {border:1px solid #aaa; padding:1em; border-radius:3px; display:inline-block;}
 form label {display:block;  margin:1em 0;}
@@ -57,4 +58,4 @@ input[type="submit"] {
     0px -1px 0px rgba(028,028,028,1),
     0px 0px 0px rgba(255,255,255,0);
 }
-
+footer {color:#fff;}
