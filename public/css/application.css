@@ -17,7 +17,7 @@ a {color:#efefef;}
      -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.75), inset 0px 1px 1px rgba(0, 0, 0, 0.75);
           box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.75), inset 0px 1px 1px rgba(0, 0, 0, 0.75); 
         } 
-.site-header h1 {font-size:1em; position:relative; left:0; top:1em; font-weight:normal;}
+.site-header h1 {font-size:1em; position:relative; left:0; top:1em; font-weight:normal; margin:0;}
     .site-header h1 a i,
     .site-header h1 a b {text-transform:lowercase; font-family:georgia,"times new roman",times,serif; font-size:0.75em;font-weight:normal; font-style:italic; letter-spacing:0;}
 
@@ -28,9 +28,39 @@ a {color:#efefef;}
 
 
 
-.nav {width:90%; height:30px; background:#333; padding:0 5%;}
+.nav {width:100%; position:fixed; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #c7c7c7;
+  padding: 10px 14px;
+  background: -moz-linear-gradient(
+    top,
+    #4c4c4c 0%,
+    #2a2a2a);
+  background: -webkit-gradient(
+    linear, left top, left bottom,
+    from(#4c4c4c),
+    to(#2a2a2a));
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #202020;
+  -moz-box-shadow:
+    0px 1px 0px rgba(066,066,066,1),
+    inset 0px 1px 0px rgba(103,103,103,1);
+  -webkit-box-shadow:
+    0px 1px 0px rgba(066,066,066,1),
+    inset 0px 1px 0px rgba(103,103,103,1);
+  box-shadow:
+    0px 1px 0px rgba(066,066,066,1),
+    inset 0px 1px 0px rgba(103,103,103,1);
+  text-shadow:
+    0px -1px 0px rgba(028,028,028,1),
+    0px 0px 0px rgba(255,255,255,0);
+}
 .nav li {display:inline-block; margin-right:1em;}
-.nav li a {display:block; line-height:30px; color:#efefef; text-decoration:none; }
+.nav li a {display:block; line-height:30px; color:#efefef; text-decoration:none; 
+}
 
 .wrong {background:red; color:#fff;}
 

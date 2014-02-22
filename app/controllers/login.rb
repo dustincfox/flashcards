@@ -11,7 +11,7 @@ post '/login' do
     session[:username] = params[:username]
     redirect to('/profile')
   else
-    erb :_login_responce, :locals => {message: "Failed: you done fucked up"}
+    erb :_login_response, :locals => {message: "Failed: you done fucked up"}
   end
 end
 
