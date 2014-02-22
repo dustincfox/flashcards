@@ -12,9 +12,12 @@ DO THIS REALLY FUCKING OFTEN SO ANY MERGE CONFLICTS ARE SUPER MINOR. LITERALLY, 
 4. Add your branch to the remote repository (git push -u origin branchname)
 5. Make your changes in your branch.
 6. Once changes are done, git add and git commit your branch.
-7. Change to the master branch (git checkout master)
-8. Run git merge yourbranchname
-9. 
+7. Push the latest version of your branch up to it's remote on github (git push -u origin yourbranchname)
+8. Change to the master branch (git checkout master)
+9. Update the master branch to the latest version in the repo (git pull)
+10. Confirm you are on the master branch (git status)
+11.  From the master branch, merge your local copy of master and your local copy of your branch (git merge master yourbranchname)
+12. 
 
 
 
