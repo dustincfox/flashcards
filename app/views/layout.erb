@@ -22,7 +22,7 @@
       </ul>
     </nav>
     <div class="content" role="main">
-      <%= erb :_stats %>
+      <% if @stats_display == true %><%= erb :_stats %><% end %>
       <%= erb :_login_form %>
       <%= yield %>
       <%= erb :_jokes %>

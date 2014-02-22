@@ -17,13 +17,11 @@ header,
 .walrus {display:block; width:300px; height:300px; background:transparent; overflow:hidden; border-radius:50%; 
   box-shadow: 0px 1px 3px rgba(000,000,000,0.5), inset 0px -1px 0px rgba(255,255,255,0.7); border:1px solid #333; }
 .walrus img {height:inherit;}
-.content {background:#eee;
-  -webkit-box-shadow:
-    0px 1px 0px rgba(066,066,066,1),
-    inset 0px 1px 0px rgba(103,103,103,1);
-  box-shadow:
-    0px 1px 0px rgba(066,066,066,1),
-    inset 0px 1px 0px rgba(103,103,103,1);}
+.content {background:#eee; border-radius:3px; margin-top:1em;
+  -webkit-box-shadow: 0px 1px 0px rgba(066,066,066,1), inset 0px 1px 0px rgba(103,103,103,1);
+          box-shadow: 0px 1px 0px rgba(066,066,066,1), inset 0px 1px 0px rgba(103,103,103,1);}
+
+form {border:1px solid #aaa; padding:1em; border-radius:3px; display:inline-block;}
 form label {display:block;  margin:1em 0;}
 form input {display:inline-block; margin-right:5px;}
 

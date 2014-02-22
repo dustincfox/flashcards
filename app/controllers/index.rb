@@ -17,7 +17,7 @@ post '/round/create' do
   @deck_id = @deck.id
   @user_id = User.where(username: session[:username]).first.id
   session[:user_id] = @user_id
-  @round = Round.create(deck_id: @deck_id, user_id: @user_id) #session[:user_id])
+  @round = Round.create(deck_id: @deck_id, user_id: @user_id)
   session[:round_id] = @round.id
   session[:cards] = @deck.cards.map(&:id)
   session[:right_count] = 0
@@ -26,7 +26,7 @@ post '/round/create' do
 end
 
 get '/round/next/?' do
-  # erb session[:cards]
+  @stats_display = true
   redirect to("/round/complete/") if session[:cards].empty?
   @shuffled_cards = session[:cards].shuffle
   @card = Card.find(@shuffled_cards.pop.to_i)
@@ -35,11 +35,13 @@ get '/round/next/?' do
 end
 
 get '/round/:card_id/?' do
+  @stats_display = true
   @current_card = Card.find(params[:card_id].to_i)
   erb :question
 end
 
 post '/round/:card_id/outcome' do
+  @stats_display = true
   @guess = params[:answer]
   @card = Card.find(params[:card_id].to_i)
   @answer = @card.answer
