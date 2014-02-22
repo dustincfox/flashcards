@@ -92,6 +92,25 @@ namespace :db do
     puts "resetting the fucking db"
     exec("bundle exec rake db:drop && bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rake db:seed")
   end
+
+  desc "no power in the verse can stop me"
+  task :set do
+    puts "resetting the fucking db"
+    exec("bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rake db:seed")
+  end
+
+  desc "set db and opening the streets ahead console"
+  task :conreset do
+    puts "resetting the fucking db"
+    exec("bundle exec rake db:drop && bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rake db:seed && bundle exec rake console")
+  end
+
+  desc "reset the fraking db and opening the console"
+  task :conreset do
+    puts "resetting the fucking db"
+    exec("bundle exec rake db:drop && bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rake db:seed && bundle exec rake console")
+  end
+
   desc "Create the database at #{DB_NAME}"
   task :create do
     puts "Creating database #{DB_NAME} if it doesn't exist..."
