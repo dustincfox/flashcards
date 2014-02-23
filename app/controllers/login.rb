@@ -46,9 +46,6 @@ post '/updatePass' do
   new_pass = params[:newPass]
   confirm  = params[:newPassConfirm]
 
-  puts "LOG: #{user_name}"
-  puts "LOG: #{new_pass}"
-  puts "LOG: #{confirm}"
 
   if new_pass == confirm
     user_obj = User.where('username = ?',user_name).first
