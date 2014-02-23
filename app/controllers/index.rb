@@ -54,11 +54,8 @@ post '/round/:card_id/outcome' do
     @feedback = "good"
     @outcome = "Nice job, you giant Walrus"
   else
-#<<<<<<< HEAD
     Guess.create(round_id: session[:round_id], user_id: session[:user_id], result: false)
-#=======
     #Guess.create(deck_id: @card.deck_id, user_id: session[:user_id], result: false)
-#>>>>>>> 76b7d9449a70f06413c8c8ff5b055f26a07cd714
     session[:wrong_count] += 1
     @feedback = "bad"
     @outcome = "Sorry, the correct answer is #{@answer}."
