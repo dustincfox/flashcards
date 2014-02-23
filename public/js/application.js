@@ -1,4 +1,5 @@
 $(document).ready(function() {
+   $("#progressbar").progressbar({})
     $("#login").hide()
     $('.login-button').on("click", function(e) {
         e.preventDefault;
@@ -6,11 +7,19 @@ $(document).ready(function() {
     });
     // Progress bar & % correct
     $(window).load(function() {
-        $correct = $('.correct').attr("id")
-        $p = parseInt($('.correct').attr("id"))
-        $b = parseInt($('.deck_size').attr("id"))
-        $(".num").text(($p/$b * 100) + '%')
-    })
+    
+        $incorrect = parseInt($('.incorrect').attr("id"))
+        $correct = parseInt($('.correct').attr("id"))
+        $deck_size = parseInt($('.deck_size').attr("id"))
+        $percent_score = (($correct / $deck_size) * 100)
+        $(".score_num").text()
+        $(".prog_num").text()
+        var answered = $correct + $incorrect
+        $(".progressbar .value").css({'width': $progress_percent + '%'})
+        $(".percent-text").text("% complete")
+     
+
+    });
 
     $('#question-form').on('submit', function(event) {
         event.preventDefault();

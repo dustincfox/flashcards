@@ -45,7 +45,8 @@ input[type="submit"] {color: #eee; padding:0.7em; -webkit-border-radius: 3px; bo
 }
 .hidden {visibility:hidden;}
 footer {color:#fff;}
-
+.progressbar {padding:5px; border-radius:3px; background:#000; display:block; width:100%; height:20px; margin-top:20px;}
+.progressbar .value {display:block; height:inherit; background:#b000b0;}
 .indent {
   text-indent: .5em;
   font-size: 80%;
