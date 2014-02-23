@@ -17,10 +17,11 @@
     </header>
     <nav role="primary" class="nav">
       <ul class="global-nav">
+        <li><a href="/">Home</a></li>
         <% if session[:username] %>
         <li><a href="/profile">Profile</a></li>
         <% end %>
-        <li><a href="/decks">Decks</a></li>
+        <!--li><a href="/decks">Decks</a></li-->
         <li><a href="/round/new">Play</a></li>
         <li class="login-out-buttons"><% if session[:username].nil? %><a href="/login" class="login">Log In</a><% else %><a href="/logout" class="logout">Logout</a><% end %>
       </ul>

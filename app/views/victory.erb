@@ -1,7 +1,16 @@
-<div>
-	<h1>CONGRATS! YOU HAVE WON!</h1>
-  <h2>Mama Merge is Proud of all her walruses, but mostly you!</h2>
-	<h3>
-		<a href="/round/new">Try another Deck?</a>
-	</h3>
+<div class="victory">
+  <% @right = session[:right_count].to_i %>
+  <% @deck_size = session[:deck_size].to_i %>
+  <% @score = @right * 100 / @deck_size %>
+  <p>You got <%= @right %> questions correct out of <%= session[:deck_size] %>.</p>
+    <% if @score > 90 %>
+      <p>Mama Merge is Proud of all her walruses, but mostly you! <%= @score %>% is quite a score!!</p>
+    <% elsif @score > 75 %>
+      <p>Mama Merge is a little disappointed in your score of <%= @score %>%. Why didn't you get them all right?</p>
+    <% else %>
+      <p>You are the worst walrus ever. A score of <%= @score %>% is pathetic. Even Dustin can do better than that.</p>
+    <% end %>
+
+		<p class="btn-wrapper"><a class="btn" href="/round/new">Moar Flashcards!</a></p>
+	
 </div>

@@ -17,9 +17,9 @@ a {color:#121212; text-decoration:none;}
 /* RESPONSIVE LAYOUT */
 nav,
 header,
-
 .content,
 .footer {display:block;width:90%; margin:0 2.5%; padding:1em 2.5%; }
+nav {padding:.8em 2.5%;}
 .card #submit {padding:2px;}
 .card h4 {text-align:center;}
 .card form {display:block; text-align:center; margin:0 auto; border:0;}
@@ -46,11 +46,14 @@ input[type="submit"] {color: #eee; padding:0.7em; -webkit-border-radius: 3px; bo
   -webkit-box-shadow: 0px 1px 0px rgba(066,066,066,1), inset 0px 1px 0px rgba(103,103,103,1);
           box-shadow: 0px 1px 0px rgba(066,066,066,1), inset 0px 1px 0px rgba(103,103,103,1);
 }
+.content .btn-wrapper {text-align:center; margin:1em auto;}
+.content .btn {display:inline-block; margin:0 auto; text-decoration:none;}
 #result_container {margin:0 auto;}
 #result_container .next {margin:0 auto; text-align:center;}
 #result_container a {text-decoration:none;}
 .hidden {visibility:hidden;}
 footer {color:#fff;}
+.victory {text-align:center;}
 .indent {
   text-indent: .5em;
   font-size: 80%;
