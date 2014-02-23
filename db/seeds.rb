@@ -120,7 +120,7 @@ Deck.create(name: "Game of Thrones")
 
 Card.create(deck_id: 6, question: "Who dies", answer: "Everyone" )
 
-Deck.create(name: "Are They Awesome?")
+Deck.create(name: "Are They Awesome")
 
 Card.create(deck_id: 7, question: "Dustin", answer: "Yes" )
 Card.create(deck_id: 7, question: "Thomas", answer: "Yes" )
