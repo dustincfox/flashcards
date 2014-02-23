@@ -1,5 +1,6 @@
+
 html {background:#220f46 url(images/bg.jpg) 0 0 no-repeat; background-size:100%; background-attachment:cover;}
-.joke {display:block;  margin-top:3em; padding:0.5em; background:#220f46;/*background:url(images/bg.jpg) 0 0 no-repeat;*/ background-size:100%; background-attachment:cover; color:#eee; border-radius:3px;}
+.joke {display:block; margin-top:2em; line-height:1.1em; padding:0.5em; background:#220f46;/*background:url(images/bg.jpg) 0 0 no-repeat;*/ background-size:100%; background-attachment:cover; color:#eee; border-radius:3px;}
 .joke .inner {display:block; text-shadow: 0px -1px 0px rgba(028,028,028,1),
     0px 0px 0px rgba(255,255,255,0);
   font-size:1.2em; background:rgba(255,255,255, 0.3);  padding:1em; border-radius:3px;}
@@ -12,9 +13,9 @@ a {color:#121212; text-decoration:none;}
 nav,
 header,
 .content,
-.footer {display:block;width:90%; margin:0 2.5%; padding:2em 2.5%; }
+.footer {display:block;width:90%; margin:0 2.5%; padding:1em 2.5%; }
 
-.walrus {display:block; width:300px; height:300px; background:transparent; overflow:hidden; border-radius:50%;
+.walrus {display:none; width:300px; height:300px; background:transparent; overflow:hidden; border-radius:50%;
   box-shadow: 0px 1px 3px rgba(000,000,000,0.5), inset 0px -1px 0px rgba(255,255,255,0.7); border:1px solid #333; }
 .walrus img {height:inherit;}
 
@@ -66,3 +67,28 @@ footer {color:#fff;}
   text-indent: .5em;
   font-size: 80%;
 }
+
+.site-header b {font-size:0.7em;}
+
+@media screen and (min-width: 20em) {
+  .walrus {display:block; width:70px; height:70px; top:6em; right:3em;
+  
+}
+@media screen and (min-width: 35em) {
+   .walrus {width:150px; height:150px;}
+}
+
+@media screen and (min-width: 41em) {
+  .walrus {top:1em;}
+}
+@media screen and (min-width:47em) {
+  .walrus {display:block; width:200px; height:200px;}
+  .site-header h1 {font-size:3em;}
+  .site-header {max-width:70%;}
+}
+
+@media screen and (min-width:65em) {
+  .walrus {width:350px; height:350px;}
+}
+
+
