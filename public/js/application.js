@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   $("#progressbar").progressbar({})
+    $("#progressbar").progressbar({})
     $("#login").hide()
     $('.login-button').on("click", function(e) {
         e.preventDefault;
@@ -34,6 +34,32 @@ $(document).ready(function() {
         $('.joke-answer').show()
     });
    
+    $('.walrus').on('click', function(){
+        $(".walrus").effect("explode");
+    });
+
+    $('.walrus').on('mouseenter', function(){
+        $(document).keydown(function(key) {
+            switch(parseInt(key.which,10)) {
+                case 65:
+                    $('.walrus').animate({right: "+=40px"}, 'fast');
+                    break;
+                case 83:
+                    $('.walrus').animate({top: "+=40px"}, 'fast');
+                    break;
+                case 87:
+                    $('.walrus').animate({top: "-=40px"}, 'fast');
+                    break;
+                case 68:
+                    $('.walrus').animate({right: "-=40px"}, 'fast');
+                    
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
+
 
     
     

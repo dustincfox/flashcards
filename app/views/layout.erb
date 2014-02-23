@@ -4,8 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
+  <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css'/>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
   <script src="/js/application.js"></script>
   <title>Dusty and Friends' Fun Cards and Walruses</title>
 </head>
@@ -13,7 +15,7 @@
   <div class="wrapper">
     <header class="site-header">
         <h1><a href="/">Dusty <i class="amp">&amp;</i> Friends' Fun Cards <br><b><i class="amp">and</i> Walruses</b></a></h1>
-        <div class="walrus"><img alt="a walrus" src="/images/walrus<%= rand(3) + 1 %>.jpeg"/></div>
+        <div class="walrus" id="walrus_image"><img alt="a walrus" src="/images/walrus<%= rand(3) + 1 %>.jpeg"/></div>
     </header>
     <nav role="primary" class="nav">
       <ul class="global-nav">
