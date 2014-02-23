@@ -69,8 +69,9 @@ post '/round/:card_id/outcome' do
   end
 end
 
-
 get '/complete/?' do
+  @right = session[:right_count].to_i
+  @deck_size = session[:deck_size].to_i
   session[:right_count] = 0
   session[:wrong_count] = 0
   erb :victory

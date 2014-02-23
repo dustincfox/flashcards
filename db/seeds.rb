@@ -25,7 +25,7 @@ Card.create(deck_id: 2, question: "What is the capital of Indiana", answer: "Ind
 Card.create(deck_id: 2, question: "What is the capital of Ohio", answer: "Columbus" )
 Card.create(deck_id: 2, question: "What is the capital of Rhode Island", answer: "Providence" )
 Card.create(deck_id: 2, question: "What is the capital of New York", answer: "Albany" )
-Card.create(deck_id: 2, question: "What is the capital of New Jersey", answer: "Ternton" )
+Card.create(deck_id: 2, question: "What is the capital of New Jersey", answer: "Trenton" )
 Card.create(deck_id: 2, question: "What is the capital of North Carolina", answer: "Raleigh" )
 Card.create(deck_id: 2, question: "What is the capital of South Carolina", answer: "Columbia" )
 Card.create(deck_id: 2, question: "What is the capital of California", answer: "Sacramento" )
@@ -120,7 +120,7 @@ Deck.create(name: "Game of Thrones")
 
 Card.create(deck_id: 6, question: "Who dies", answer: "Everyone" )
 
-Deck.create(name: "Are They Awesome?")
+Deck.create(name: "Whether Awesome")
 
 Card.create(deck_id: 7, question: "Dustin", answer: "Yes" )
 Card.create(deck_id: 7, question: "Thomas", answer: "Yes" )
