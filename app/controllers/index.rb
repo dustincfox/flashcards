@@ -15,8 +15,10 @@ end
 post '/round/create' do
   @deck = Deck.find(params[:deck_id].to_i)
   @deck_id = @deck.id
-  @user_id = User.where(username: session[:username]).first.id
-  session[:user_id] = @user_id
+  # if @user_id
+    @user_id = User.where(username: session[:username]).first.id
+    session[:user_id] = @user_id
+  # end
   @round = Round.create(deck_id: @deck_id, user_id: @user_id)
   session[:round_id] = @round.id
   session[:cards] = @deck.cards.map(&:id)
@@ -49,10 +51,13 @@ post '/round/:card_id/outcome' do
   if @answer == @guess
     Guess.create(round_id: session[:round_id], user_id: session[:user_id], result: true)
     session[:right_count] += 1
-    @outcome = "Nice job Walrus"
+    @feedback = "good"
+    @outcome = "Nice job, you giant Walrus"
   else
     Guess.create(round_id: session[:round_id], user_id: session[:user_id], result: false)
+    #Guess.create(deck_id: @card.deck_id, user_id: session[:user_id], result: false)
     session[:wrong_count] += 1
+    @feedback = "bad"
     @outcome = "Sorry, the correct answer is #{@answer}."
   end
   if request.xhr?

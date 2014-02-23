@@ -1,2 +1,7 @@
-<h2><%= @outcome %></h2>
+<%= if @feedback == "good" %>
+  <h4 class="success">
+<% else %>
+<h4 class="failure">
+<% end %>
+  <%= @outcome %></h4>
 <p><a href="/round/next">Next Question</a></p>

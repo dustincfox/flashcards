@@ -1,9 +1,12 @@
 <% uname = session[:username] %>
 <% if !uname.nil? %>
-  <h3> Welcome <%= uname%> </h3>
-  <% rounds = "rounds"%>
+
+  <h2>Welcome <i><%= uname%></i></h2>
+  <p><a href="/logout">Logout</a></p>
+  <% rounds = "rounds" %>
+  <h3><%= uname %> Stats</h3>
   <% rounds = "round" if @rounds_played == 1 %>
-  <p>You have played <%="#{@rounds_played} #{rounds}"%>.</p>
+  <p>You have played <%= "#{@rounds_played} #{rounds}" %>.</p>
 
   <%Deck.all.each do |deck|%>
     <% rounds = "rounds"%>
@@ -15,11 +18,12 @@
       <% correct = @user.decks.where(name: "#{deck.name}").first.rounds.map(&:guesses).flatten.map(&:result).count(true) %>
       <% percent = correct * 100 / guesses %>
     <% end %>
-    <p><%= "#{deck.name}: #{times} #{rounds}" %>
-      <span class="indent"><%= "Grade #{percent}\%" %></span></p>
+    <p><b><%= "#{deck.name}</b>: #{times} #{rounds}" %>
+      <span class="indent grade"><%= "Grade #{percent}\%" %></span></p>
   <% end %>
 
-  <a href="/logout">Logout</a>
+
+  
   <h2>Account Settings</h2>
   <h4>Change Password</h4>
   <form action="/updatePass" method="post">
@@ -35,6 +39,7 @@
   <input type="submit" value="Update" />
   </form>
 
+
   <!-- Not sure this is needed now with extra tabs, was good here but we have other places now...will comment out for now in case others disagree -->
   <!-- <h2>Deck Information</h2>
   <% Deck.all.each do |deck_obj| %>
@@ -45,7 +50,8 @@
       <% end %>
     </div>
   <% end %>
+-->
 <% else %>
   <code>401 You are not authorized to view this page</code>
   <p>Please <a href="/login">Login</a> if you think this is a mistake</p>
-<% end %> -->
+<% end %>

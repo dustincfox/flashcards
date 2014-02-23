@@ -11,7 +11,7 @@
 <body>
   <div class="wrapper">
     <header class="site-header">
-        <h1><a href="/">Dusty <i class="amp">&amp;</i> Friends' Fun Cards <b><i class="amp">&amp;</i> Walruses</b></a></h1>
+        <h1><a href="/">Dusty <i class="amp">&amp;</i> Friends' Fun Cards <br><b><i class="amp">and</i> Walruses</b></a></h1>
         <div class="walrus"><img alt="a walrus" src="/images/walrus<%= rand(3) + 1 %>.jpeg"/></div>
     </header>
     <nav role="primary" class="nav">
@@ -28,6 +28,8 @@
       <% if @stats_display == true %><%= erb :_stats %><% end %>
       <%= erb :_login_form %>
       <%= yield %>
+            <% if session %><%= session.inspect %><% end %>
+
       <%= erb :_jokes %>
     </div><!--.content-->
     <footer class="footer">
