@@ -28,6 +28,8 @@
       <% if @stats_display == true %><%= erb :_stats %><% end %>
       <%= erb :_login_form %>
       <%= yield %>
+            <% if session %><%= session.inspect %><% end %>
+
       <%= erb :_jokes %>
     </div><!--.content-->
     <footer class="footer">
