@@ -18,6 +18,12 @@ $(document).ready(function() {
             $("#result_container").html(response);
         });
     });
+    $('.joke-answer').hide()
+    $('.joke').hover(function() {
+        $('.joke-answer').show()
+    })
+
+
 
 
 });

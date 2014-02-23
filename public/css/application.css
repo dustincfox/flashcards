@@ -38,32 +38,10 @@ form input {display:inline-block; margin-right:5px;}
 .walrus {display:block; position:absolute; top:1em; right:1em;}
 .nav li {display:block; float:left; margin-right:1em;}
 .nav li a,
-input[type="submit"] {
-  color: #eee;
-  padding: 10px 14px;
-  background: -moz-linear-gradient(
-    top,
-    #b000b0 0%,
-    #6e0c6e);
-  background: -webkit-gradient(
-    linear, left top, left bottom,
-    from(#b000b0),
-    to(#6e0c6e));
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -moz-box-shadow:
-    0px 1px 0px rgba(066,066,066,1),
-    inset 0px 1px 0px rgba(103,103,103,1);
-  -webkit-box-shadow:
-    0px 1px 0px rgba(066,066,066,1),
-    inset 0px 1px 0px rgba(103,103,103,1);
-  box-shadow:
-    0px 1px 0px rgba(066,066,066,1),
-    inset 0px 1px 0px rgba(103,103,103,1);
-  text-shadow:
-    0px -1px 0px rgba(028,028,028,1),
-    0px 0px 0px rgba(255,255,255,0);
+input[type="submit"] {color: #eee; padding:0.7em; -webkit-border-radius: 3px; border-radius: 3px; text-shadow: 0px -1px 0px rgba(028,028,028,1), 0px 0px 0px rgba(255,255,255,0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b000b0), to(#6e0c6e));
+  -webkit-box-shadow: 0px 1px 0px rgba(066,066,066,1), inset 0px 1px 0px rgba(103,103,103,1);
+          box-shadow: 0px 1px 0px rgba(066,066,066,1), inset 0px 1px 0px rgba(103,103,103,1);
 }
 footer {color:#fff;}
 
