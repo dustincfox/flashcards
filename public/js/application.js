@@ -7,18 +7,12 @@ $(document).ready(function() {
     });
     // Progress bar & % correct
     $(window).load(function() {
-    
         $incorrect = parseInt($('.incorrect').attr("id"))
         $correct = parseInt($('.correct').attr("id"))
         $deck_size = parseInt($('.deck_size').attr("id"))
         $percent_score = (($correct / $deck_size) * 100)
-        $(".score_num").text()
-        $(".prog_num").text()
         var answered = $correct + $incorrect
-        $(".progressbar .value").css({'width': $progress_percent + '%'})
-        $(".percent-text").text("% complete")
-     
-
+        $(".meter span").attr("style","width: " + (100 * answered/$deck_size) + "%")
     });
 
     $('#question-form').on('submit', function(event) {
@@ -30,10 +24,10 @@ $(document).ready(function() {
         var route = (path + "/outcome")
         //console.log
         $.post(route, data, function(response) {
-            //console.log("reponse:" + response)
             $("#result_container").html(response);
         });
     });
+    
     $('.joke-answer').hide()
     $('.joke').hover(function() {
         $('.joke-answer').show()

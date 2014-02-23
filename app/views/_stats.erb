@@ -3,16 +3,16 @@
 <% @deck_size = session[:deck_size].to_i %>
 <% @progress = session[:cards].length / @deck_size %>
 <%= session.inspect %>
-<section class="stats">
-
   <% if session[:right_count] || session[:wrong_count]%>
-    <span class="correct" id="<%= @correct %>">Correct: <%= @correct %></span><span class="incorrect" id="<%= @incorrect %>">Incorrect: <%= @incorrect %></span>
+    <ul class="stats">
+      <li class="correct" id="<%= @correct %>"><b>Correct:</b> <%= @correct %></li>
+      <li class="incorrect" id="<%= @incorrect %>"><b>Incorrect:</b> <%= @incorrect %></li>
+      <li class="percent-correct"><b>Score:</b> <%= "#{100 * @correct.to_i / @deck_size}%" %></li>
+    </ul>
     <span class="hidden deck_size" id="<%= @deck_size %>"></span>
-    <p class="percent-correct">Overall Percentage: <span class="score_num"></span></p>
   <% end %>
-</section>
 
-   
- <div class="progressbar">
-      <div class="value"><div class="percent-text">% Complete</div></div>
-    </div>
+<b class="percent-complete">% Complete</b> 
+<div class="meter orange nostripes">
+     <span style="width: 0%"></span>
+</div>

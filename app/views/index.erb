@@ -1,9 +1,13 @@
+<% if !session[:user_id] %>
 <p>Create an account.</p>
 <form id="login" method="post" action="/createAccount">
   <label for="username">Username: <input type="text" name="username" id="username" /></label>
   <label for="password">Password: <input type="password" name="password" id="password" /></label>
   <input type="submit" value="Create Account" id="submit"/>
 </form>
+<% else %>
+<p><a href="/round/new">Play again!</a></p>
+<% end %>
 
 
 

@@ -1,7 +1,8 @@
+<div class="card">
 <h4><%= @current_card.question %>?</h4>
 <form action="/round/<%= @current_card.id %>/outcome" method="post" id="question-form">
   <input type="text" name="answer" id="answer"/>
   <input type="submit" id="submit"/>
 </form>
 <div id="result_container"></div>
-
+</div>

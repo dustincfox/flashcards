@@ -30,7 +30,6 @@ end
 
 get '/round/next/?' do
   @stats_display = true
-  #redirect to("/round/complete/") if session[:cards].empty?
   redirect to("/complete/") if session[:cards].empty?
   @shuffled_cards = session[:cards].shuffle
   @card = Card.find(@shuffled_cards.pop.to_i)
