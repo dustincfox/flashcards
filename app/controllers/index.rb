@@ -48,7 +48,8 @@ post '/round/:card_id/outcome' do
   @guess = params[:answer]
   @card = Card.find(params[:card_id].to_i)
   @answer = @card.answer
-  if @answer == @guess
+
+  if @answer.downcase.strip == @guess.downcase.strip
     Guess.create(round_id: session[:round_id], user_id: session[:user_id], result: true)
     session[:right_count] += 1
     @feedback = "good"
