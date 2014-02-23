@@ -2,7 +2,6 @@
 <% @incorrect = session[:wrong_count].to_s %>
 <% @deck_size = session[:deck_size].to_i %>
 <% @progress = session[:cards].length / @deck_size %>
-<%= session.inspect %>
   <% if session[:right_count] || session[:wrong_count]%>
     <ul class="stats">
       <li class="correct" id="<%= @correct %>"><b>Correct:</b> <%= @correct %></li>
