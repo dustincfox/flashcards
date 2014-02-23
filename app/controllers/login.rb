@@ -42,9 +42,14 @@ get '/decks' do
 end
 
 post '/updatePass' do
-  user_name= params[:uName]
+  user_name= params[:uname]
   new_pass = params[:newPass]
   confirm  = params[:newPassConfirm]
+
+  puts "LOG: #{user_name}"
+  puts "LOG: #{new_pass}"
+  puts "LOG: #{confirm}"
+
   if new_pass == confirm
     user_obj = User.where('username = ?',user_name).first
     if !user_obj.nil?
@@ -59,7 +64,7 @@ post '/updateUname' do
   user_name = params[:userName]
 
   user_obj = User.where('username = ?',old_name).first
-  puts "LOG: #{old_name}"
+
   if !user_obj.nil?
     user_obj.update_attributes(username: user_name)
   end
