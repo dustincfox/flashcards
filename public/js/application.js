@@ -4,6 +4,13 @@ $(document).ready(function() {
         e.preventDefault;
         $("#login").toggle()
     });
+    // Progress bar & % correct
+    $(window).load(function() {
+        $correct = $('.correct').attr("id")
+        $p = parseInt($('.correct').attr("id"))
+        $b = parseInt($('.deck_size').attr("id"))
+        $(".num").text(($p/$b * 100) + '%')
+    })
 
     $('#question-form').on('submit', function(event) {
         event.preventDefault();
@@ -21,8 +28,11 @@ $(document).ready(function() {
     $('.joke-answer').hide()
     $('.joke').hover(function() {
         $('.joke-answer').show()
-    })
+    });
+   
 
+    
+    
 
 
 

@@ -22,6 +22,7 @@ post '/round/create' do
   @round = Round.create(deck_id: @deck_id, user_id: @user_id)
   session[:round_id] = @round.id
   session[:cards] = @deck.cards.map(&:id)
+  session[:deck_size] = @deck.cards.length
   session[:right_count] = 0
   session[:wrong_count] = 0
   redirect to("/round/next")
@@ -44,11 +45,12 @@ get '/round/:card_id/?' do
 end
 
 post '/round/:card_id/outcome' do
+  
   @stats_display = true
   @guess = params[:answer]
   @card = Card.find(params[:card_id].to_i)
   @answer = @card.answer
-
+  
   if @answer.downcase.strip == @guess.downcase.strip
     Guess.create(round_id: session[:round_id], user_id: session[:user_id], result: true)
     session[:right_count] += 1
