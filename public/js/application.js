@@ -25,6 +25,7 @@ $(document).ready(function() {
         //console.log
         $.post(route, data, function(response) {
             $("#result_container").html(response);
+            $('#submit').hide();
         });
     });
     

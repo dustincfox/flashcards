@@ -1,8 +1,12 @@
 <div class="victory">
-  <% @right = session[:right_count].to_i %>
-  <% @deck_size = session[:deck_size].to_i %>
+
   <% @score = @right * 100 / @deck_size %>
   <p>You got <%= @right %> questions correct out of <%= session[:deck_size] %>.</p>
+    <% puts @right %>
+    <% puts @deck_size %>
+    <% puts "score" %>
+
+    <% puts @score %>
     <% if @score > 90 %>
       <p>Mama Merge is Proud of all her walruses, but mostly you! <%= @score %>% is quite a score!!</p>
     <% elsif @score > 75 %>
