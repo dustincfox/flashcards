@@ -24,7 +24,7 @@ header,
 
 nav {padding:.8em 2.5%;}
 .card #submit {padding:2px;}
-.card h4 {text-align:center;}
+.card h4 {text-align:center; font-weight:bold;}
 .card form {display:block; text-align:center; margin:0 auto; border:0;}
 .walrus {display:none; width:300px; height:300px; background:transparent; overflow:hidden; border-radius:50%;
   box-shadow: 0px 1px 3px rgba(000,000,000,0.5), inset 0px -1px 0px rgba(255,255,255,0.7); border:1px solid #333; }
