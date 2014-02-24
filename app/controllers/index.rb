@@ -13,19 +13,23 @@ get '/round/new/?' do
 end
 
 post '/round/create' do
-  @deck = Deck.find(params[:deck_id].to_i)
-  @deck_id = @deck.id
-  # if @user_id
-    @user_id = User.where(username: session[:username]).first.id
-    session[:user_id] = @user_id
-  # end
-  @round = Round.create(deck_id: @deck_id, user_id: @user_id)
-  session[:round_id] = @round.id
-  session[:cards] = @deck.cards.map(&:id)
-  session[:deck_size] = @deck.cards.length
-  session[:right_count] = 0
-  session[:wrong_count] = 0
-  redirect to("/round/next")
+  if session[:username]
+    @deck = Deck.find(params[:deck_id].to_i)
+    @deck_id = @deck.id
+    # if @user_id
+      @user_id = User.where(username: session[:username]).first.id
+      session[:user_id] = @user_id
+    # end
+    @round = Round.create(deck_id: @deck_id, user_id: @user_id)
+    session[:round_id] = @round.id
+    session[:cards] = @deck.cards.map(&:id)
+    session[:deck_size] = @deck.cards.length
+    session[:right_count] = 0
+    session[:wrong_count] = 0
+    redirect to("/round/next")
+  else 
+    redirect to("/login")
+  end
 end
 
 get '/round/next/?' do
