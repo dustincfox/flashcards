@@ -1,3 +1,7 @@
+This project was a challenge that was given during Dev Bootcamp.  Our team made a simple flashcard application with Sinatra.  If you would like to see my more recent work please view https://github.com/dustincfox/GrocerEASE
+
+
+
 ## GIT WORKFLOW
 
 **DO THIS REALLY OFTEN SO ANY MERGE CONFLICTS ARE SUPER MINOR. KEEP BRANCH FEATURES TINY TINY. LITERALLY, EVERY TIME YOU MAKE 3 LINES OF CODE CHANGES OR SOMETHING LIKE THAT**
